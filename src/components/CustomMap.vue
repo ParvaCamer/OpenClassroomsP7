@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p :key="data" v-for="data in $options.myJson">{{ data }}</p>
 
     <l-map
       :center="[
@@ -22,6 +21,12 @@
       >
         <l-popup>T'es ici gros bg !</l-popup>
       </l-marker>
+      <l-marker
+        v-for="resto of restos"
+        :key="resto.id"
+        :lat-lng="[resto.lat, resto.long]"
+        :icon="icon"
+      />
     </l-map>
   </div>
 </template>
@@ -29,8 +34,9 @@
 <script>
 import { LMap, LTileLayer, LMarker, LPopup, LIcon } from "vue2-leaflet";
 import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { Icon } from "leaflet";
-import my_json from "/listRestaurant.json";
+import axios from "axios";
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -46,7 +52,6 @@ export default {
     LMarker,
     LPopup,
     LIcon,
-    myJson: my_json,
   },
   props: {
     defaultLocation: {
@@ -62,11 +67,19 @@ export default {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       zoom: 15,
       userLocation: {},
+      restos: [],
+      icon: L.icon({
+        iconUrl: require('../assets/restoPNG.png'),
+        iconSize: [50, 40],
+        iconAnchor: [20, 41],
+      }),
     };
   },
+
   mounted() {
     this.getUserPosition(); // run the function to get the position
   },
+
   methods: {
     zoomUpdated(zoom) {
       this.zoom = zoom;
@@ -88,6 +101,16 @@ export default {
         });
       }
     },
+  },
+
+  async created() {
+    try {
+      const res = await axios.get(`http://localhost:3000/restos`);
+
+      this.restos = res.data;
+    } catch (e) {
+      console.error(e);
+    }
   },
 };
 </script>
