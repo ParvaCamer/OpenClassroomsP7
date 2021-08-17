@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <l-map
       :center="[
         userLocation.lat || defaultLocation.lat,
@@ -19,15 +18,19 @@
           userLocation.lng || defaultLocation.lng,
         ]"
       >
-        <l-popup>T'es ici gros bg !</l-popup>
       </l-marker>
       <l-marker
         v-for="resto of restos"
         :key="resto.id"
         :lat-lng="[resto.lat, resto.long]"
         :icon="icon"
-      />
+        @click="showInfos = !showInfos"
+      >
+        <l-popup> {{ resto.restaurantName }}</l-popup>
+      </l-marker>
     </l-map>
+    <div class ="showInfosResto" v-show="showInfos">
+    </div>
   </div>
 </template>
 
@@ -37,6 +40,9 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Icon } from "leaflet";
 import axios from "axios";
+import Informations from "@/components/InfoResto.vue";
+import InfosResto from "@/components/InfoResto.vue";
+
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -44,7 +50,6 @@ Icon.Default.mergeOptions({
   iconUrl: require("leaflet/dist/images/marker-icon.png"),
   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
-
 export default {
   components: {
     LMap,
@@ -52,6 +57,8 @@ export default {
     LMarker,
     LPopup,
     LIcon,
+    Informations,
+    InfosResto
   },
   props: {
     defaultLocation: {
@@ -69,10 +76,11 @@ export default {
       userLocation: {},
       restos: [],
       icon: L.icon({
-        iconUrl: require('../assets/restoPNG.png'),
-        iconSize: [50, 40],
-        iconAnchor: [20, 41],
+        iconUrl: require("../assets/restoPNG.png"),
+        iconSize: [17, 17],
+        iconAnchor: [5, 5],
       }),
+      showInfos: false,
     };
   },
 
@@ -117,6 +125,7 @@ export default {
 <style scoped>
 .map {
   position: absolute;
+  z-index: 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
