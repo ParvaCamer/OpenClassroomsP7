@@ -941,6 +941,160 @@
                     "stars": 1
                 }
             ]
+        },
+        {
+            "id":39,
+            "restaurantName": "Le Dancing",
+            "address": "296 Rue de Lille, 59130 Lambersart",
+            "lat": 50.648851616821474, 
+            "long": 3.0429641076626646, 
+            "ratings": [
+                {
+                    "stars": 5,
+                    "comment": "Très belle découverte. Un lieu qui respire la fête et la bonne ambiance. Envie d'y revenir vite"
+                },
+                {
+                    "stars": 4,
+                    "comment": "très bel endroit retro. souvenir de nos années 80. une belle terrasse extérieure et une carte variée. bon moment"
+                },
+                {
+                    "stars": 5,
+                    "comment": "Nous avons testé des plats à emporter lors du marché des restaurateurs sur lambersart, un vrai régal ! Nous nous sommes laissés tenter par du cabillaud et des gnocchis de pomme de terre aux épinards et champignons ! Tres bon même réchauffer"
+                },
+                {
+                    "stars": 3,
+                    "comment":"bon, pas très cher. Je n'y ferai pas un repas de fête mais le midi, en pause méridienne, c'est correct. L'ambiance peut perturbée un peu compte tenu des anciennes activités du site et des affiches qui rappellent cette histoire"
+                }
+            ]
+        },
+        {
+            "id":40,
+            "restaurantName": "Les Vedettes",
+            "address": "51 Bis Av. de la République, 59130 Lambersart",
+            "lat": 50.64774974155649, 
+            "long": 3.0352203294914055, 
+            "ratings": [
+                {
+                    "stars": 3,
+                    "comment": "Longue attente malgré une réservation. Table pour 3 exiguë . Cuisine locale correcte sans plus. Un employé supplémentaire ne serait pas de trop pour cet établissement passablement visité. Mieux dans le secteur."
+                },
+                {
+                    "stars": 3,
+                    "comment": "Lieu atypique carte qui mériterai d'être réduite aux produits locaux et pensez aux enfants plats un peu excessifs actuellement. Respect des règles sanitaires à revoir masque obligatoire pour les serveurs mais inexistants. Tout le monde est sympathique et l'endroit mérite de se développer si l'écoute des clients est respecté. Les choses que l'on dit peuvent faire avancer si on prend le recul nécessaire. Bonne continuation et à très bientôt"
+                },
+                {
+                    "stars": 4,
+                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre."
+                },
+                {
+                    "stars": 5,
+                    "comment":"Des vraies frites maison ! Miam !"
+                }
+            ]
+        },
+        {
+            "id":41,
+            "restaurantName": "La Cense",
+            "address": "27 Rue Auguste Bonte, 59130 Lambersart",
+            "lat": 50.644374411363245, 
+            "long": 3.026978388039635, 
+            "ratings": [
+                {
+                    "stars": 5,
+                    "comment": "On se régale ! Le service est de grande qualité. Des réductions salées, originales sont servies. Un restaurant où il fait bon aller..."
+                },
+                {
+                    "stars": 5,
+                    "comment": "Quel bonheur de découvrir cet endroit magnifique. Après des mois de click and collect très bien réalisés, nous avons pu enfin bénéficier d'un service à table. Très belle adresse, je recommande. Pour les vins, la carte n'est pas longue et c'est tant mieux, l'essentiel y est. Bravo"
+                },
+                {
+                    "stars": 4,
+                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre."
+                },
+                {
+                    "stars": 3,
+                    "comment":"Pas de conseil pour les vins, manque un sommelier. Le repas sympa. Rapport qualité prix 7 /10"
+                }
+            ]
+        },
+        {
+            "id":42,
+            "restaurantName": "Empreinte",
+            "address": "170 Av. de l'Hippodrome, 59130 Lambersart",
+            "lat": 50.64096335825442, 
+            "long": 3.0320507463509725, 
+            "ratings": [
+                {
+                    "stars": 5,
+                    "comment": "Tout simplement ce qui se fait de mieux au niveau restauration dans l'agglomération lilloise. J'ai eu l'occasion de prendre un repas à emporté pour Noël. J'ai était bluffé tellement bluffé que j'ai oublie de prendre en photo le repas c'est pas grave j'ai pris le dessert."
+                },
+                {
+                    "stars": 5,
+                    "comment": "Cuisine raffinée et très créative. Des associations très stimulantes pour les papilles et l'esprit. Accueil chaleureux. Nous avons plaisir à y retourner régulièrement."
+                },
+                {
+                    "stars": 5,
+                    "comment": "Une très belle découverte. Un menu en 7 plats créatif et inspiré à partir des produits de saison. Un accueil très agréable et détendu. Un accord mets et vins parfait. Un cadre moderne. À ne rater sous aucun prétexte !"
+                },
+                {
+                    "stars": 5,
+                    "comment":"Que du bonheur d'aller à l'empreinte....cuisine originale et super bien servie par Inès et son équipe...Nous n'attendons qu'une occasion pour y retourner..."
+                },
+                {
+                    "stars": 4,
+                    "comment":"Toujours une bonne expérience ! Une valeur sûre"
+                }
+            ]
+        },
+        {
+            "id":43,
+            "restaurantName": "La Laiterie",
+            "address": "138 Av. de l'Hippodrome, 59130 Lambersart",
+            "lat": 50.640119097593605, 
+            "long": 3.0332479393992884, 
+            "ratings": [
+                {
+                    "stars": 5,
+                    "comment": "Sans aucune faute ce midi. Service impeccable, notamment le chef de salle. Découverte de vins merveilleux et abordables. Menu frais et copieux."
+                },
+                {
+                    "stars": 5,
+                    "comment": "Cuisine imaginative et subtile . Chef qui travaille avec des producteurs locaux. Service discret et efficace"
+                },
+                {
+                    "stars": 5,
+                    "comment": "Une adresse de qualité située dans un cadre verdoyant. Un chef inspiré qui saura vous surprendre par des mariages de saveur surprenants."
+                },
+                {
+                    "stars": 4,
+                    "comment":"Cadre extérieur très sympathique, intérieur légèrement plus simple mais toujours décoré avec goûts. Nous avons choisis le menu à la carte (mes 2 menus dégustations ne nous attirés pas). Plats de qualités et très raffinés, le fois gras confit, le pigeon et me dessert pistache cerise ont étaient une révélation culinaire. Seule 'déception' sur la viande mâturé et me bavarois au maroilles, un manque de saveurs. Les prix restent raisonnable pour ma qualité du service et des produits."
+                }
+            ]
+        },
+        {
+            "id":44,
+            "restaurantName": "La Table du Colysée",
+            "address": "201 Av. de l'Hippodrome, 59130 Lambersart",
+            "lat": 50.639170799622015, 
+            "long": 3.035231920891899, 
+            "ratings": [
+                {
+                    "stars": 5,
+                    "comment": "Une excellente table, service impeccable et des prix raisonnables."
+                },
+                {
+                    "stars": 4,
+                    "comment": "Toujours aussi bon!"
+                },
+                {
+                    "stars": 5,
+                    "comment": "Excellent restaurant, on a passé un super moment. C'était très bon. Beau cadre et on y est très bien accueilli. C'était une première mais certainement pas la dernière. Je vous le conseille vivement."
+                },
+                {
+                    "stars": 4,
+                    "comment":"Très bonne expérience culinaire. Personnel un peu jeune qui doit être encouragé car ils mettent du coeur à leur travail et ne peuvent que progresser. Je conseille cet établissement."
+                }
+            ]
         }
     ]
 }
