@@ -2,7 +2,7 @@
   <div class="rectangle">
     <h2><u>Restaurants </u>:</h2>
     <div v-for="resto in restos" :key="resto.id">
-      {{ resto.restaurantName }} : {{ restos }}
+      {{ resto.restaurantName }} : {{ restoStar }}
     </div>
   </div>
 </template>
@@ -15,6 +15,7 @@ export default {
   data() {
     return {
       restos: [],
+      restoStar: null,
       allRating: 0,
       currentTotal: 0,
     };
@@ -24,19 +25,18 @@ export default {
           this.restos = res.data
           console.log(this.restos);
           let currentTotal = 0;
-          let allRatings = 0;
+          let allRatings = 0; 
           this.restos.forEach( function(oneResto) {
             oneResto.ratings.forEach( function(stars) {
               currentTotal += stars.stars;
               allRatings += 1;
             })
-            let allStars = currentTotal / allRatings;
-            console.log("Le resto ", oneResto.restaurantName, "a une moyenne d'étoiles de", allStars, " étoiles");
-            console.log(allStars)
-            allRatings = 0;
-            currentTotal = 0;
-            this.restos = allStars
-          }); 
+            console.log("Le resto ", oneResto.restaurantName, "a une moyenne d'étoiles de", currentTotal / allRatings, " étoiles");
+            //allRatings = 0;
+            //currentTotal = 0;
+            
+          }); this.restoStar = currentTotal / allRatings
+          console.log(this.restoStar)
           }) 
         .catch((error) => console.log(error));
     },

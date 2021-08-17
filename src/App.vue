@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <custom-map></custom-map>
     <informations></informations>
     <info-resto></info-resto>
   </div>

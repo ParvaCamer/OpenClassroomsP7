@@ -29,8 +29,6 @@
         <l-popup> {{ resto.restaurantName }}</l-popup>
       </l-marker>
     </l-map>
-    <div class ="showInfosResto" v-show="showInfos">
-    </div>
   </div>
 </template>
 

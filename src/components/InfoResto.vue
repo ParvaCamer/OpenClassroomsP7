@@ -1,6 +1,6 @@
 <template>
   <div class="infos">
-    <h2>a</h2>
+    <input name="zone de texte" type="text" value="non modifiable" size="20" maxlength="20" readonly />
   </div>
 </template>
 
@@ -14,14 +14,11 @@ export default {
   },
   data() {
     return {
-      restos: [],
+      restos: null
     };
   },
-methods: {
-  displayInfos() {
-    return axios.get('http://localhost:3000/restos/1/ratings')
+mounted() {
   }
-}
 };
 </script>
 
