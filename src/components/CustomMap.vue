@@ -25,10 +25,14 @@
         :lat-lng="[resto.lat, resto.long]"
         :icon="icon"
         @click="showInfos = !showInfos"
-      >
-        <l-popup> {{ resto.restaurantName }}</l-popup>
+      > 
+        <l-popup> {{ displayInfos() }}</l-popup>
       </l-marker>
+
     </l-map>
+          <div class="displayInfo" v-show="showInfos">
+        <InfoResto />
+      </div>
   </div>
 </template>
 
@@ -38,8 +42,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Icon } from "leaflet";
 import axios from "axios";
-import Informations from "@/components/InfoResto.vue";
-import InfosResto from "@/components/InfoResto.vue";
+import InfoResto from "@/components/InfoResto.vue";
 
 
 delete Icon.Default.prototype._getIconUrl;
@@ -55,8 +58,7 @@ export default {
     LMarker,
     LPopup,
     LIcon,
-    Informations,
-    InfosResto
+    InfoResto
   },
   props: {
     defaultLocation: {
@@ -106,9 +108,10 @@ export default {
           };
         });
       }
-    },
+    },    displayInfos() {
+      console.log(this.showInfos)
+    }
   },
-
   async created() {
     try {
       const res = await axios.get(`http://localhost:3000/restos`);

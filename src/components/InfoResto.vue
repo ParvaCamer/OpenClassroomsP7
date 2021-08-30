@@ -1,6 +1,9 @@
 <template>
   <div class="infos">
-    <input name="zone de texte" type="text" value="non modifiable" size="20" maxlength="20" readonly />
+    {{ msg }}
+    <div v-for="infoResto in infoRestos" :key="infoResto.id">
+      {{ infoResto.restaurantName }} : {{ infoResto.infoRating }}
+    </div>
   </div>
 </template>
 
@@ -14,20 +17,33 @@ export default {
   },
   data() {
     return {
-      restos: null
+      infoRestos: [],
     };
   },
-mounted() {
-  }
+  mounted() {
+    axios.get("http://localhost:3000/restos").then((res) => {
+      this.infoRestos = res.data;
+
+      this.infoRestos.forEach(function (oneResto) {
+        let infoRating = null;
+        oneResto.ratings.forEach(function (infos) {
+          infoRating = infos.comment;
+        });
+        oneResto.infoComment = infoRating;
+      });
+    }).catch((error) => console.log(error));
+  },
 };
 </script>
 
 <style scoped>
 .infos {
-  z-index: 3;
+  z-index: 2;
+  position: absolute;
   background-color: aliceblue;
   height: 50%;
   border: 1px solid black;
-  margin-left: 100px;
+  left: 50%;
+  top: 25%;
 }
 </style>
