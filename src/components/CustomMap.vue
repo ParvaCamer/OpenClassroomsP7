@@ -24,15 +24,13 @@
         :key="resto.id"
         :lat-lng="[resto.lat, resto.long]"
         :icon="icon"
-        @click="showInfos = !showInfos"
-      > 
-        <l-popup> {{ displayInfos() }}</l-popup>
+        @click="displayInfos"
+      >
       </l-marker>
-
     </l-map>
-          <div class="displayInfo" v-show="showInfos">
-        <InfoResto />
-      </div>
+    <div class="displayInfo" v-show="showInfos">
+      <InfoResto v-on:closeInfo="showInfos = false" />
+    </div>
   </div>
 </template>
 
@@ -43,7 +41,6 @@ import L from "leaflet";
 import { Icon } from "leaflet";
 import axios from "axios";
 import InfoResto from "@/components/InfoResto.vue";
-
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -58,7 +55,7 @@ export default {
     LMarker,
     LPopup,
     LIcon,
-    InfoResto
+    InfoResto,
   },
   props: {
     defaultLocation: {
@@ -108,9 +105,11 @@ export default {
           };
         });
       }
-    },    displayInfos() {
-      console.log(this.showInfos)
-    }
+    },
+    displayInfos() {
+      this.showInfos = !this.showInfos;
+      alert(this.restos.restaurantName)
+    },
   },
   async created() {
     try {
