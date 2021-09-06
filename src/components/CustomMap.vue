@@ -20,17 +20,15 @@
       >
       </l-marker>
       <l-marker
-        v-for="resto of restos"
-        :key="resto.id"
+        v-for="(resto, index) in restos"
+        :key="index"
         :lat-lng="[resto.lat, resto.long]"
         :icon="icon"
-        @click="displayInfos"
+        v-on:click="sendInfos(index)"
       >
       </l-marker>
     </l-map>
-    <div class="displayInfo" v-show="showInfos">
-      <InfoResto v-on:closeInfo="showInfos = false" />
-    </div>
+
   </div>
 </template>
 
@@ -40,7 +38,8 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Icon } from "leaflet";
 import axios from "axios";
-import InfoResto from "@/components/InfoResto.vue";
+import InfoResto from './InfoResto.vue';
+
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -55,7 +54,7 @@ export default {
     LMarker,
     LPopup,
     LIcon,
-    InfoResto,
+    InfoResto
   },
   props: {
     defaultLocation: {
@@ -63,8 +62,11 @@ export default {
       default: () => ({
         lat: 0,
         lng: 0,
-      }),
+      })
     },
+    infoUpdate: {
+      type: Boolean
+    }
   },
   data() {
     return {
@@ -77,12 +79,16 @@ export default {
         iconSize: [17, 17],
         iconAnchor: [5, 5],
       }),
-      showInfos: false,
+      showInfo: false,
+      index: 0
     };
   },
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
+        axios
+      .get("http://localhost:3000/restos").then((res) => {
+        this.restos = res.data;})
   },
 
   methods: {
@@ -106,20 +112,19 @@ export default {
         });
       }
     },
-    displayInfos() {
-      this.showInfos = !this.showInfos;
-      alert(this.restos.restaurantName)
+    sendInfos(index) {
+      this.showInfo = true;
+      this.index = index
+      this.$emit("inputInfo", this.index)
+      this.$emit("displayInfo", this.showInfo)
     },
   },
-  async created() {
-    try {
-      const res = await axios.get(`http://localhost:3000/restos`);
-
-      this.restos = res.data;
-    } catch (e) {
-      console.error(e);
+  
+  watch: {
+    infoUpdate() {
+      this.showInfo = this.infoUpdate
     }
-  },
+  }
 };
 </script>
 <style scoped>
