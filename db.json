@@ -10,15 +10,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Super cuisine, bonne ambiance , un régal la pizza au feu de bois. Merci pour l'accueil."
+                    "comment": "Super cuisine, bonne ambiance , un régal la pizza au feu de bois. Merci pour l'accueil.",
+                    "name": "Allyriane Boulanger"
                 },
                 {
                     "stars": 5,
-                    "comment": "Le patron très sympa on s'est régalé, je recommande fortement."
+                    "comment": "Le patron très sympa on s'est régalé, je recommande fortement.",
+                    "name": "Delmar Bizier"
                 },
                 {
                     "stars": 2,
-                    "comment": "Pizza pas assez cuite... frites ratées... accueil pas super enjoué... mauvais jour ?? Dommage... bonne continuation quand même."
+                    "comment": "Pizza pas assez cuite... frites ratées... accueil pas super enjoué... mauvais jour ?? Dommage... bonne continuation quand même.",
+                    "name": "Eugène Bélanger"
                 }
             ]
         },
@@ -31,11 +34,13 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Bien reçus. Cuisine au top. saveur .gout . Au rendez-vous.  Adresse a retenir pour bon mangeur."
+                    "comment": "Bien reçus. Cuisine au top. saveur .gout . Au rendez-vous.  Adresse a retenir pour bon mangeur.",
+                    "name": "Thierry Fortin"
                 },
                 {
                     "stars": 1,
-                    "comment": "Bonne accueil cependant La viande n'était pas cuite et les frites hyper grasse ,je suis super déçu."
+                    "comment": "Bonne accueil cependant La viande n'était pas cuite et les frites hyper grasse ,je suis super déçu.",
+                    "name": "Amabella Hervé"
                 }
             ]
         },
@@ -48,19 +53,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Parfait ! Que ce soit en terme de qualité de service ou des plats. C'était parfait. Un régal"
+                    "comment": "Parfait ! Que ce soit en terme de qualité de service ou des plats. C'était parfait. Un régal",
+                    "name": "Letizia Lettiere"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent accueil, des plats délicieux et très bien présentés"
+                    "comment": "Excellent accueil, des plats délicieux et très bien présentés",
+                    "name": "Antoni Alexander"
                 },
                 {
                     "stars": 3,
-                    "comment": "Plats riches en goût. Le bémol le cadre extérieur en sortie de rocade et proche station essence. Ne pas chercher un cadre romantique"
+                    "comment": "Plats riches en goût. Le bémol le cadre extérieur en sortie de rocade et proche station essence. Ne pas chercher un cadre romantique",
+                    "name": "Elsie Henderson"
                 },                
                 {
                     "stars": 2,
-                    "comment": "Pour les fois où on nous a accepté pour déjeuner c'était bien même si un peu cher pour ce que c'est. Par contre nous refuser deux fois à la suite alors qu'on se présente à 13h15 et qu'il y a des tables vides... c'est moyen. Après peut-être que vous n'avez pas besoin de travailler !"
+                    "comment": "Pour les fois où on nous a accepté pour déjeuner c'était bien même si un peu cher pour ce que c'est. Par contre nous refuser deux fois à la suite alors qu'on se présente à 13h15 et qu'il y a des tables vides... c'est moyen. Après peut-être que vous n'avez pas besoin de travailler !",
+                    "name": "George Humphries"
                 }
             ]
         },
@@ -73,15 +82,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Excellente découverte, les plats sont très copieux, le personnel est passionné et agréable. Vous ne serez pas déçu."
+                    "comment": "Excellente découverte, les plats sont très copieux, le personnel est passionné et agréable. Vous ne serez pas déçu.",
+                    "name": "Kiera Poole"
                 },
                 {
                     "stars": 4,
-                    "comment": "Une adresse sympathique si vous recherchez un peu de dépaysement durant cette période de disette restauristique. 😁"
+                    "comment": "Une adresse sympathique si vous recherchez un peu de dépaysement durant cette période de disette restauristique. 😁",
+                    "name": "Brooke Jamieson"
                 },
                 {
                     "stars": 3,
-                    "comment": "Lieu très zen très agréable très belle décoration. Pour le repas c'est classique sympa joli avec une touche d'écologie (bol en carton, des couverts en bambou...). Je mets 3 étoiles parce que le tarif me paraît un peu élevé..."
+                    "comment": "Lieu très zen très agréable très belle décoration. Pour le repas c'est classique sympa joli avec une touche d'écologie (bol en carton, des couverts en bambou...). Je mets 3 étoiles parce que le tarif me paraît un peu élevé...",
+                    "name": "Jacob Anderson"
                 }
             ]
         },
@@ -94,11 +106,13 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Le service et les plats sont top ! C'est le patron qui nous a servi ce midi. Gentillesse, sourire et sympathie étaient au rendez vous."
+                    "comment": "Le service et les plats sont top ! C'est le patron qui nous a servi ce midi. Gentillesse, sourire et sympathie étaient au rendez vous.",
+                    "name": "Maureen H. Lawrence"
                 },
                 {
                     "stars": 1,
-                    "comment": "Un petit resto à ne pas louper. Un service agréable et qui conseille bien. Une cuisine délicieuse et qui vaut le détour 😁"
+                    "comment": "Un petit resto à ne pas louper. Un service agréable et qui conseille bien. Une cuisine délicieuse et qui vaut le détour 😁",
+                    "name": "Cayden Murphy"
                 }
             ]
         },
@@ -111,19 +125,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Service rapide et pizza excellente."
+                    "comment": "Service rapide et pizza excellente.",
+                    "name": "Ruta Sawicka"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent,  accueil très agréable chaleureux,  pizzas succulentes , à bientôt"
+                    "comment": "Excellent,  accueil très agréable chaleureux,  pizzas succulentes , à bientôt",
+                    "name": "Erdey Ferike"
                 },
                 {
-                    "stars":3,
-                    "comment":"10 pizzas commandées, 10 pizzas carbonisées ... pas une avec une cuisson correcte ..."
+                    "stars":4,
+                    "comment":"Je s'appelle Groot !",
+                    "name": "Groot"
                 },
                 {
                     "stars":1,
-                    "comment":"Pas bon du tout, on en jette la moitié ! La commande est pourtant classique pour les enfants : pizza fromage. Au final, les enfants font la grimace, le fromage est rance, les deux autres pizzas ne sont pas bonnes non plus. Bilan: 0 sur 3 pizzas."
+                    "comment":"Pas bon du tout, on en jette la moitié ! La commande est pourtant classique pour les enfants : pizza fromage. Au final, les enfants font la grimace, le fromage est rance, les deux autres pizzas ne sont pas bonnes non plus. Bilan: 0 sur 3 pizzas.",
+                    "name": "Mae T. Williams"
                 }
             ]
         },
@@ -136,19 +154,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Rdv tous les jeudis à cette crêperie, jamais déçue, excellente carte et excellent produit, personnel très agréable."
+                    "comment": "Rdv tous les jeudis à cette crêperie, jamais déçue, excellente carte et excellent produit, personnel très agréable. PS : Je ne suis pas petit !",
+                    "name": "Edward Elric"
                 },
                 {
                     "stars": 3,
-                    "comment": "Crêperie correcte mais pas très copieuse, l'accompagnement pourrait être étoffé... Service un peu froid..."
+                    "comment": "Crêperie correcte mais pas très copieuse, l'accompagnement pourrait être étoffé... Service un peu froid...",
+                    "name": "Julienne Clavette"
                 },
                 {
                     "stars":3,
-                    "comment":"Patronne agréable, pratique car ils prennent la carte restaurant, bon mais pas succulent.."
+                    "comment":"Patronne agréable, pratique car ils prennent la carte restaurant, bon mais pas succulent..",
+                    "name": "Wit Chmielewski"
                 },
                 {
                     "stars": 4,
-                    "comment":"Lieu convivial, bon accueil. Très bon choix dans la formule à moins de 15 €. Repas copieux, belle coupe glacée. Et... à deux pas du cinéma le pont des arts. Je recommande fortement. À bientôt"
+                    "comment":"Lieu convivial, bon accueil. Très bon choix dans la formule à moins de 15 €. Repas copieux, belle coupe glacée. Et... à deux pas du cinéma le pont des arts. Je recommande fortement. À bientôt",
+                    "name": "Subhan Murphy"
                 }
             ]
         },
@@ -161,15 +183,18 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Simple mais bon."
+                    "comment": "Simple mais bon.",
+                    "name": "Malthe S. Vestergaard"
                 },
                 {
                     "stars": 5,
-                    "comment": "Buffet et carte au choix. Cuisine délicieuse. Prix raisonnable.Je recommande"
+                    "comment": "Buffet et carte au choix. Cuisine délicieuse. Prix raisonnable.Je recommande",
+                    "name": "Naruto Uzumaki"
                 },
                 {
                     "stars":3,
-                    "comment":"Déçue par le goût de notre plat. Les boules cocos étaient farineuses. Les Nems super bon."
+                    "comment":"Déçue par le goût de notre plat. Les boules cocos étaient farineuses. Les Nems super bon.",
+                    "name": "David Glover"
                 }
             ]
         },
@@ -182,15 +207,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Super restaurant, à l'image de son patron. Produits frais et de bonne qualité, le tout fait maison. Je recommande vivement, surtout pour ceux qui aiment vraiment bien manger..."
+                    "comment": "Super restaurant, à l'image de son patron. Produits frais et de bonne qualité, le tout fait maison. Je recommande vivement, surtout pour ceux qui aiment vraiment bien manger...",
+                    "name": "Danko Ildiko"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon restaurant, le patron est très accueillant, la cuisine est délicieuse, vous ne manquerez de rien !"
+                    "comment": "Très bon restaurant, le patron est très accueillant, la cuisine est délicieuse, vous ne manquerez de rien !",
+                    "name": "Orson Charest"
                 },
                 {
                     "stars":2,
-                    "comment":"Table pour 2 personnes réservée le mercredi 1er juillet à 19h30...nous arrivons et restaurant fermé, génial...le proprio devrait bloquer son planning si son resto est fermé. Très dommage pour une deuxième fois"
+                    "comment":"Table pour 2 personnes réservée le mercredi 1er juillet à 19h30...nous arrivons et restaurant fermé, génial...le proprio devrait bloquer son planning si son resto est fermé. Très dommage pour une deuxième fois",
+                    "name": "Zoja Jasińska"
                 }
             ]
         },
@@ -203,19 +231,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Restaurant spécialités italiennes très sympa. Accueil chaleureux, pizzas délicieuses, prix corrects...à découvrir !"
+                    "comment": "Restaurant spécialités italiennes très sympa. Accueil chaleureux, pizzas délicieuses, prix corrects...à découvrir !",
+                    "name": "Muhammed Allan"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon accueil"
+                    "comment": "Très bon accueil",
+                    "name": "Eugenio Calabresi"
                 },
                 {
                     "stars":4,
-                    "comment": "Accueil sympathique,  bonnes 🍕 pizzas..."
+                    "comment": "Accueil sympathique,  bonnes 🍕 pizzas...",
+                    "name": "Josie Kennedy"
                 },
                 {
                     "stars":4,
-                    "comment": "Très bon rapport qualité prix."
+                    "comment": "Très bon rapport qualité prix.",
+                    "name": "Tony Martin"
                 }
             ]
         },
@@ -228,11 +260,13 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Très bonne cuisine,  service sympathique et dynamique. Je conseille à ceux qui aime la bonne humeur et la convivialité"
+                    "comment": "Très bonne cuisine,  service sympathique et dynamique. Je conseille à ceux qui aime la bonne humeur et la convivialité",
+                    "name": "Brice Lacharité"
                 },
                 {
                     "stars": 5,
-                    "comment": "Plats et desserts excellents, portions généreuses. Equipe au top, service efficace et serveurs très sympathiques"
+                    "comment": "Plats et desserts excellents, portions généreuses. Equipe au top, service efficace et serveurs très sympathiques",
+                    "name": "Gradasso Chouinard"
                 }
             ]
         },
@@ -245,19 +279,23 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Eh bien poussant la porte : Agréable surprise lieu très cosy. Personnel attentif gentillesse le tout dans un calme et un rapport financier très correct"
+                    "comment": "Eh bien poussant la porte : Agréable surprise lieu très cosy. Personnel attentif gentillesse le tout dans un calme et un rapport financier très correct",
+                    "name": "Szöllösy Oszkar"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon restaurant, produits de Bonne qualité,serveuse très agréable, je vous le conseille je retournerai avec plaisir."
+                    "comment": "Très bon restaurant, produits de Bonne qualité,serveuse très agréable, je vous le conseille je retournerai avec plaisir.",
+                    "name": "Michael A. Cooper"
                 },
                 {
                     "stars":5,
-                    "comment": "Des produits de qualité en quantité conséquente, préparés avec beaucoup de professionnalisme. L'équipe est avenante et d'une extrême gentillesse. Du pur bonheur, merci."
+                    "comment": "Des produits de qualité en quantité conséquente, préparés avec beaucoup de professionnalisme. L'équipe est avenante et d'une extrême gentillesse. Du pur bonheur, merci.",
+                    "name": "Delit Chaussée"
                 },
                 {
                     "stars":5,
-                    "comment": "Mets délicats, ambiance chaleureuse. Avons passé un moment très agréable. A découvrir."
+                    "comment": "Mets délicats, ambiance chaleureuse. Avons passé un moment très agréable. A découvrir.",
+                    "name": "Neil Gray"
                 }
             ]
         },
@@ -270,23 +308,28 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Plats copieux et savoureux, bon rapport qualité-prix, personnel accueillant et disponible, parking dans l'hippodrome.  Bien pour une première fois."
+                    "comment": "Plats copieux et savoureux, bon rapport qualité-prix, personnel accueillant et disponible, parking dans l'hippodrome.  Bien pour une première fois.",
+                    "name": "Juan M. Willis"
                 },
                 {
                     "stars": 4,
-                    "comment": "Très bonne brasserie le risotto au lentilles est excellent le cadre est très sympa et calme une belle vue sur le champs de course.le petit point négatif c est le pain 😕 à changer."
+                    "comment": "Très bonne brasserie le risotto au lentilles est excellent le cadre est très sympa et calme une belle vue sur le champs de course.le petit point négatif c est le pain 😕 à changer.",
+                    "name": "Alvina D. Edmonson"
                 },
                 {
                     "stars":1,
-                    "comment": "Manque de personnel pour le service de groupes.le repas était froid quand les assiettes sont arrivées. 7 fois nous avons réclamé du pain, il est arrivé au dessert. Le vin blanc est servi 20 min après avoir fini l'entrée. Les serveuses n'ont pas le droit de nous adresser la parole ! Dommage parce que le repas était bon malgré le manque de chaleur !"
+                    "comment": "Manque de personnel pour le service de groupes.le repas était froid quand les assiettes sont arrivées. 7 fois nous avons réclamé du pain, il est arrivé au dessert. Le vin blanc est servi 20 min après avoir fini l'entrée. Les serveuses n'ont pas le droit de nous adresser la parole ! Dommage parce que le repas était bon malgré le manque de chaleur !",
+                    "name": "Korneliusz Dąbrowski"
                 },
                 {
                     "stars":2,
-                    "comment": "Très moyen"
+                    "comment": "Très moyen",
+                    "name": "Louis Adams"
                 },
                 {
                     "stars":4,
-                    "comment": "Très beau restaurant qui surplombe l'hippodrome. J'ai adoré  la sauce maroilles accompagné d'une très très belle pièces de bœuf. 😀"
+                    "comment": "Très beau restaurant qui surplombe l'hippodrome. J'ai adoré  la sauce maroilles accompagné d'une très très belle pièces de bœuf. 😀",
+                    "name": "William T. Buckler"
                 }
             ]
         },
@@ -299,19 +342,23 @@
             "ratings": [
                 {
                     "stars": 3,
-                    "comment": "Bonne recherche dans l Élaboration des mets mais le prix exorbitant des boissons rend malheureusement l expérience moins agréable"
+                    "comment": "Bonne recherche dans l Élaboration des mets mais le prix exorbitant des boissons rend malheureusement l expérience moins agréable",
+                    "name": "William D. Jefferson"
                 },
                 {
                     "stars": 5,
-                    "comment": "Vraiment tres bon! Service attentionné et efficace..."
+                    "comment": "Vraiment tres bon! Service attentionné et efficace...",
+                    "name": "Sol King"
                 },
                 {
                     "stars":5,
-                    "comment": "Une jolie découverte. Lieu chaleureux et équipe sympathique. Les plats étaient délicieux. Les vins excellents. Nous reviendront sans hésiter."
+                    "comment": "Une jolie découverte. Lieu chaleureux et équipe sympathique. Les plats étaient délicieux. Les vins excellents. Nous reviendront sans hésiter.",
+                    "name": "Robert Davidson"
                 },
                 {
                     "stars":3,
-                    "comment": "Espace respectueux du Covid. C'est bon ... à la mode ... tendance cuisine actuelle. 😒 Attention au chariot de dessert ... il existe bien, mais vous n'avez le droit qu'à un seul"
+                    "comment": "Espace respectueux du Covid. C'est bon ... à la mode ... tendance cuisine actuelle. 😒 Attention au chariot de dessert ... il existe bien, mais vous n'avez le droit qu'à un seul",
+                    "name": "Nunzia Sagese"
                 }
             ]
         },
@@ -324,15 +371,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "On se régale à chaque fois."
+                    "comment": "On se régale à chaque fois.",
+                    "name": "Maria Hansen"
                 },
                 {
                     "stars":5,
-                    "comment": "Excellent produit, super accueil. Je recommande 👌"
+                    "comment": "Excellent produit, super accueil. Je recommande 👌",
+                    "name": "Russell G. Lester"
                 },
                 {
                     "stars":5,
-                    "comment": "Propriétaires super sympa très bon et pas chers qualité prix cool !"
+                    "comment": "Propriétaires super sympa très bon et pas chers qualité prix cool !",
+                    "name": "Alexander Webster"
                 }
             ]
         },
@@ -345,19 +395,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Succulent couscous. Très bon accueil et pas cher. Vivement recommandé."
+                    "comment": "Succulent couscous. Très bon accueil et pas cher. Vivement recommandé.",
+                    "name": "Pamela P. Shillings"
                 },
                 {
                     "stars":4,
-                    "comment": "Très bien très bon. Mais attente très très longue malgré le rdv . 45 min ! Pas facile d organiser le repas"
+                    "comment": "Très bien très bon. Mais attente très très longue malgré le rdv . 45 min ! Pas facile d organiser le repas",
+                    "name": "Suzette Laramée"
                 },
                 {
                     "stars":4,
-                    "comment": "Nous avons pris couscous et tajine. C'était vraiment délicieux. Les consignes sanitaires sont parfaitement respectées."
+                    "comment": "Nous avons pris couscous et tajine. C'était vraiment délicieux. Les consignes sanitaires sont parfaitement respectées.",
+                    "name": "Jacob White"
                 },
                 {
                     "stars":4,
-                    "comment": "Expérience concluante avec le couscous royal. Je conseille de prendre une part de légume supplémentaire par personne. Bonnes pâtisseries orientales."
+                    "comment": "Expérience concluante avec le couscous royal. Je conseille de prendre une part de légume supplémentaire par personne. Bonnes pâtisseries orientales.",
+                    "name": "Jose J. Hunter"
                 }
             ]
         },
@@ -370,15 +424,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Juste parfait ! Accueil et service au top. Mention spéciale au serveur de la table 124"
+                    "comment": "Juste parfait ! Accueil et service au top. Mention spéciale au serveur de la table 124",
+                    "name": "Midoriya Izuku"
                 },
                 {
                     "stars":4,
-                    "comment": "Beau cadre, personnel sympathique et accueillant qui ont réussi à s’adapter à la réouverture. Je recommande pour y passer un bon moment !"
+                    "comment": "Beau cadre, personnel sympathique et accueillant qui ont réussi à s’adapter à la réouverture. Je recommande pour y passer un bon moment !",
+                    "name": "Diane C. Putnam"
                 },
                 {
                     "stars":3,
-                    "comment": "Décor sublime accueil agréable mais la nourriture .. surtout la viande très caoutchouteux, 18 ingrédients notés pour la pizza 15 ingrédients présents.."
+                    "comment": "Décor sublime accueil agréable mais la nourriture .. surtout la viande très caoutchouteux, 18 ingrédients notés pour la pizza 15 ingrédients présents..",
+                    "name": "Cristina Genovese"
                 }
             ]
         },
@@ -391,15 +448,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Excellent restaurant italien. Raffinée, gourmande, une cuisine élaborée pour satisfaire toutes les papilles. Une carte offrant un choix varié sur les plats et sur les boissons dont de très bons vins italiens. Service impeccable, gentil et très attentionné. Un très bon choix. Une belle découverte. Je recommande."
+                    "comment": "Excellent restaurant italien. Raffinée, gourmande, une cuisine élaborée pour satisfaire toutes les papilles. Une carte offrant un choix varié sur les plats et sur les boissons dont de très bons vins italiens. Service impeccable, gentil et très attentionné. Un très bon choix. Une belle découverte. Je recommande.",
+                    "name": "April M. Balzer"
                 },
                 {
                     "stars":5,
-                    "comment": "Enchantés de notre repas. Bons plats très copieux pour un prix raisonnable. Mention spéciale pour le personnel très professionnel et tellement accueillant."
+                    "comment": "Enchantés de notre repas. Bons plats très copieux pour un prix raisonnable. Mention spéciale pour le personnel très professionnel et tellement accueillant.",
+                    "name": "Jowita Zawadzka"
                 },
                 {
                     "stars":2,
-                    "comment": "Repas en terrasse un midi, pas trop de monde, ce qui est plutôt agréable car les serveurs sont plutôt disponibles. La commande a été prise très rapidement, mais alors concernant le service, une blague!  Les verres arrivent au compte goutte, attente interminable, personnel ne levant pas les yeux sur nous, et après 1h30 d attente, mon plat arrive.... froid! Nous repartons déçus, et ne renouvellerons pas cette visite."
+                    "comment": "Repas en terrasse un midi, pas trop de monde, ce qui est plutôt agréable car les serveurs sont plutôt disponibles. La commande a été prise très rapidement, mais alors concernant le service, une blague!  Les verres arrivent au compte goutte, attente interminable, personnel ne levant pas les yeux sur nous, et après 1h30 d attente, mon plat arrive.... froid! Nous repartons déçus, et ne renouvellerons pas cette visite.",
+                    "name": "Kajetan Wiśniewski"
                 }
             ]
         },
@@ -412,19 +472,23 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Je n'ai jamais été déçue par ce restaurant, où la viande est excellente, une cuisson toujours respectée mais il est vrai que les prix sont un peu élevés."
+                    "comment": "Je n'ai jamais été déçue par ce restaurant, où la viande est excellente, une cuisson toujours respectée mais il est vrai que les prix sont un peu élevés.",
+                    "name": "Lendvai Odön"
                 },
                 {
                     "stars":4,
-                    "comment": "Super accueil!juste déçu des frites...mais le reste au top!"
+                    "comment": "Super accueil!juste déçu des frites...mais le reste au top!",
+                    "name": "Sailor Moon"
                 },
                 {
                     "stars":5,
-                    "comment": "Viande de très bonne qualité. Nous sommes tombés sur le patron en tant que serveur ...un régal !  Souriant , poli, amusant ... un 'serveur' comme je les aime"
+                    "comment": "Viande de très bonne qualité. Nous sommes tombés sur le patron en tant que serveur ...un régal !  Souriant , poli, amusant ... un 'serveur' comme je les aime",
+                    "name": "Noah Jarvis"
                 },
                 {
                     "stars":5,
-                    "comment": "EXCELLENT . J'adore leur viande surtout l'Araignée de bœuf. Très bon service, rapide et prix correct."
+                    "comment": "EXCELLENT . J'adore leur viande surtout l'Araignée de bœuf. Très bon service, rapide et prix correct.",
+                    "name": "Jasmin N. Mortensen"
                 }
             ]
         },
@@ -437,23 +501,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Tout est beau et bon ! Simplicité et gentillesse de l'équipe font que l'on se sent bien . Restaurant au décor épuré et apaisant . A faire et à refaire . Bravo , très belle réussite !"
+                    "comment": "Tout est beau et bon ! Simplicité et gentillesse de l'équipe font que l'on se sent bien . Restaurant au décor épuré et apaisant . A faire et à refaire . Bravo , très belle réussite !",
+                    "name": "Alex Bracegirdle"
                 },
                 {
                     "stars":5,
-                    "comment": "J'ai eu l'occasion d'y manger deux fois : une fois en menu dégustation le soir, une fois pour le déjeuner. Aucune fausse note, tous les plats étaient incroyables et le service parfait ! J'ai aussi eu la chance de pouvoir déguster un menu pour 25€ lors du premier confinement en avril dernier pour mon anniversaire. Prix vraiment corrects pour un restaurant 1 étoile, n'hésitez pas une seconde !!!"
+                    "comment": "J'ai eu l'occasion d'y manger deux fois : une fois en menu dégustation le soir, une fois pour le déjeuner. Aucune fausse note, tous les plats étaient incroyables et le service parfait ! J'ai aussi eu la chance de pouvoir déguster un menu pour 25€ lors du premier confinement en avril dernier pour mon anniversaire. Prix vraiment corrects pour un restaurant 1 étoile, n'hésitez pas une seconde !!!",
+                    "name": "Eren Jäger"
                 },
                 {
                     "stars":4,
-                    "comment": "Une très bonne expérience gastronomique. Le restaurant est récent, très bien aménagé et décoré. L'ambiance est agréable avec une vue sur la cuisine ouverte qui montre qu'il n'y a rien à cacher. La cuisine est moderne, soignée et inventive. Le carnet de réservation est chargé il vaut mieux s'y prendre à l'avance."
+                    "comment": "Une très bonne expérience gastronomique. Le restaurant est récent, très bien aménagé et décoré. L'ambiance est agréable avec une vue sur la cuisine ouverte qui montre qu'il n'y a rien à cacher. La cuisine est moderne, soignée et inventive. Le carnet de réservation est chargé il vaut mieux s'y prendre à l'avance.",
+                    "name": "Namo Étoile"
                 },
                 {
                     "stars":5,
-                    "comment": "Excellent à tous points de vue. Découvertes gastronomiques, originalité, nous avons vraiment été impressionnés par le menu. Service parfait et petit mot du chef en fin de repas. Accueil très sympa."
+                    "comment": "Excellent à tous points de vue. Découvertes gastronomiques, originalité, nous avons vraiment été impressionnés par le menu. Service parfait et petit mot du chef en fin de repas. Accueil très sympa.",
+                    "name": "Zara Forster"
                 },
                 {
                     "stars":5,
-                    "comment": "Ambiance cosy dans des tons kaki, cuisine originale, acidulée, bons produits de saison, formule dégustation au juste prix. Boissons et café raisonnables également, on préfère toujours payer le travail qui est dans l'assiette ! Merci et bonne continuation !"
+                    "comment": "Ambiance cosy dans des tons kaki, cuisine originale, acidulée, bons produits de saison, formule dégustation au juste prix. Boissons et café raisonnables également, on préfère toujours payer le travail qui est dans l'assiette ! Merci et bonne continuation !",
+                    "name": "Edward D. Bruce"
                 }
             ]
         },
@@ -466,23 +535,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Une excellente adresse. La cuisine est raffinée, variée, et l'accueil toujours chaleureux."
+                    "comment": "Une excellente adresse. La cuisine est raffinée, variée, et l'accueil toujours chaleureux.",
+                    "name": "Steve Rogers"
                 },
                 {
                     "stars":5,
-                    "comment": "Endroit très sympa équipe jeune dynamique très agréable et on s'est régalé 👍👍"
+                    "comment": "Endroit très sympa équipe jeune dynamique très agréable et on s'est régalé 👍👍",
+                    "name": "Jose J. Hunter"
                 },
                 {
                     "stars":4,
-                    "comment": "Mets fins, cuisine fraîcheur, service soigné. Moment très agréable passé à la Passerelle. Je recommande."
+                    "comment": "Mets fins, cuisine fraîcheur, service soigné. Moment très agréable passé à la Passerelle. Je recommande.",
+                    "name": "Henrik Sæther"
                 },
                 {
                     "stars":3,
-                    "comment": "Service avec le sourire, plats bons et terrasse agréable. A refaire !"
+                    "comment": "Service avec le sourire, plats bons et terrasse agréable. A refaire !",
+                    "name": "Pryor Bossé"
                 },
                 {
                     "stars":5,
-                    "comment": "Moment très agréable en terrasse au calme en bord de la marque"
+                    "comment": "Moment très agréable en terrasse au calme en bord de la marque",
+                    "name": "Julie J. Pickell"
                 }
             ]
         },
@@ -495,19 +569,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Une très belle découverte, des produits de qualité cuisinés avec justesse"
+                    "comment": "Une très belle découverte, des produits de qualité cuisinés avec justesse",
+                    "name": "Tony Stark"
                 },
                 {
                     "stars": 5,
-                    "comment": "Super restaurant. Cuisine faite maison de qualité et originale. Prix raisonnable"
+                    "comment": "Super restaurant. Cuisine faite maison de qualité et originale. Prix raisonnable",
+                    "name": "Aksel E. Frederiksen"
                 },
                 {
                     "stars": 5,
-                    "comment": "Personnel très accueillant ! Rien à dire, c'est délicieux et frais . Foncez !!!"
+                    "comment": "Personnel très accueillant ! Rien à dire, c'est délicieux et frais . Foncez !!!",
+                    "name": "Alice R. Kurtz"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent repas, le service est impeccable"
+                    "comment": "Excellent repas, le service est impeccable",
+                    "name": "Georgina Stone"
                 }
             ]
         },
@@ -520,23 +598,28 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Je recommande. Produit de saison."
+                    "comment": "Je recommande. Produit de saison.",
+                    "name": "Pamela D. Blake"
                 },
                 {
                     "stars": 4,
-                    "comment": "Nous nous sommes régalées avec la lotte si bien préparée accompagnée d'une pointe de purée de poivrons et d'une tapenade."
+                    "comment": "Nous nous sommes régalées avec la lotte si bien préparée accompagnée d'une pointe de purée de poivrons et d'une tapenade.",
+                    "name": "Samuel Dunn"
                 },
                 {
                     "stars": 4,
-                    "comment": "Repas très bon, rapide, dans un lieu bien décoré."
+                    "comment": "Repas très bon, rapide, dans un lieu bien décoré.",
+                    "name": "Emma Hyde"
                 },
                 {
                     "stars": 3,
-                    "comment": "Du choix,de la qualité, service souriant,prix correct ."
+                    "comment": "Du choix,de la qualité, service souriant,prix correct .",
+                    "name": "Ryan Archer"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon restaurant avec des plats bien chti comme il faut. Ambiance sympathique à découvrir."
+                    "comment": "Très bon restaurant ! J'adore votre viande !",
+                    "name": "Monkey D. Luffy"
                 }
             ]
         },
@@ -549,19 +632,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Juste  très bien,service adorable,excellent"
+                    "comment": "Juste  très bien,service adorable,excellent",
+                    "name": "Sasuke Uchiha"
                 },
                 {
                     "stars": 5,
-                    "comment": "Rapide et excellent !"
+                    "comment": "Rapide et excellent !",
+                    "name": "Lara Edwards"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent tant dans les assiettes que dans l'accueil bravo."
+                    "comment": "Excellent tant dans les assiettes que dans l'accueil bravo.",
+                    "name": "Jane Foster"
                 },
                 {
                     "stars": 3,
-                    "comment": "D'extérieur, ce resto ne paie pas de mine. Changement d'ambiance une fois la porte passée, cheminée, briques, belle terrasse. C'est bien. Dans l'assiette, pour y être allée plusieurs fois, je trouve la qualité inégale, le service est moyen si on ne fait pas partie des (nombreux) habitués. C'est assez long aussi, il faut avoir le temps.Quant à l'addition, je la trouve particulièrement salée, particulièrement le verre de vin à 7€, ça pique ! Dommage..."
+                    "comment": "D'extérieur, ce resto ne paie pas de mine. Changement d'ambiance une fois la porte passée, cheminée, briques, belle terrasse. C'est bien. Dans l'assiette, pour y être allée plusieurs fois, je trouve la qualité inégale, le service est moyen si on ne fait pas partie des (nombreux) habitués. C'est assez long aussi, il faut avoir le temps.Quant à l'addition, je la trouve particulièrement salée, particulièrement le verre de vin à 7€, ça pique ! Dommage...",
+                    "name": "Roux Austin"
                 }
             ]
         },
@@ -574,23 +661,28 @@
             "ratings": [
                 {
                     "stars": 4,
-                    "comment": "Deco et concept original un mixre entre brocante et atelier. Cuisine Simple .accueil extra. Un bon rendez vous entre potes."
+                    "comment": "Deco et concept original un mixre entre brocante et atelier. Cuisine Simple .accueil extra. Un bon rendez vous entre potes.",
+                    "name": "Emilio Mazzanti"
                 },
                 {
                     "stars": 5,
-                    "comment": "Que dire de cet endroit? Une fée appelée Karen vous enchante avec la douceur de son acceuil, son sourire et ... sa répartie:-) Laissez vous entrainer vers les plats magiques faits maison. De la qualité, de la quantité, des goûts créés je pense dans un chaudron aux propriétés envoutantes. C'est sûr nous reviendrons. Merci karen pour ce bon moment ce midi"
+                    "comment": "Que dire de cet endroit? Une fée appelée Karen vous enchante avec la douceur de son acceuil, son sourire et ... sa répartie:-) Laissez vous entrainer vers les plats magiques faits maison. De la qualité, de la quantité, des goûts créés je pense dans un chaudron aux propriétés envoutantes. C'est sûr nous reviendrons. Merci karen pour ce bon moment ce midi",
+                    "name": "Tom Miah"
                 },
                 {
                     "stars": 5,
-                    "comment": "Lieu adorable de la gastronomie, des plats et un accueil adorable par Karen"
+                    "comment": "Lieu adorable de la gastronomie, des plats et un accueil adorable par Karen",
+                    "name": "Turi Tas"
                 },
                 {
                     "stars": 5,
-                    "comment": "Lieu atypique(pas envie d'y entrer... et quand on est entré on a envie d'y rester.. et d ' y revenir). Patronne très sympa . Cuisine très bonne. Carte réduite mais tout est fait maison."
+                    "comment": "Lieu atypique(pas envie d'y entrer... et quand on est entré on a envie d'y rester.. et d ' y revenir). Patronne très sympa . Cuisine très bonne. Carte réduite mais tout est fait maison.",
+                    "name": "Alonso A. Lee"
                 },
                 {
                     "stars": 5,
-                    "comment": "Une personne énergique et talentueuse. Une bonne cuisine, j'ai adoré la personne le lieu et la cuisine...Bravo"
+                    "comment": "Une personne énergique et talentueuse. Une bonne cuisine, j'ai adoré la personne le lieu et la cuisine...Bravo",
+                    "name": "Zac Polglaze"
                 }
             ]
         },
@@ -603,23 +695,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "L'accueil est sympathique, les Pizza sont au top, excellentes avec une véritable pâte à pain ni trop épaisse, ni trop fine. Un régal ! Et vous trouverez quantité de produits du terroir Italien à prix raisonnable."
+                    "comment": "L'accueil est sympathique, les Pizza sont au top, excellentes avec une véritable pâte à pain ni trop épaisse, ni trop fine. Un régal ! Et vous trouverez quantité de produits du terroir Italien à prix raisonnable.",
+                    "name": "Danny R. Ruddy"
                 },
                 {
                     "stars": 4,
-                    "comment": "L'excellence de la cuisine italienne. Vraiment. Ce restaurant a un créateur de génie qui utilise des produits de grande qualité. Dommage que la porte qui ne ferme pas et vous glace le dos gâche un peu l'expérience."
+                    "comment": "L'excellence de la cuisine italienne. Vraiment. Ce restaurant a un créateur de génie qui utilise des produits de grande qualité. Dommage que la porte qui ne ferme pas et vous glace le dos gâche un peu l'expérience.",
+                    "name": "Bucky Barnes"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellente pizza italienne 👌"
+                    "comment": "Excellente pizza italienne 👌",
+                    "name": "Ann R. Gutierrez"
                 },
                 {
                     "stars": 5,
-                    "comment": "Les meilleurs pizzas que j'ai jamais mangé, on ressent la passion et la tradition de ce très beau métier à travers les pizzas 🇮🇹"
+                    "comment": "Les meilleurs pizzas que j'ai jamais mangé, on ressent la passion et la tradition de ce très beau métier à travers les pizzas 🇮🇹",
+                    "name": "Callum Ward"
                 },
                 {
                     "stars": 4,
-                    "comment": "Le meilleur endroit sur les environs de Lille pour manger une pizza. La qualité des ingrédients bio  est top. Des entrées des pizza des pâtes ,lasagne etc... Je recommande."
+                    "comment": "Le meilleur endroit sur les environs de Lille pour manger une pizza. La qualité des ingrédients bio  est top. Des entrées des pizza des pâtes ,lasagne etc... Je recommande.",
+                    "name": "Mathilde Dostie"
                 }
             ]
         },
@@ -632,15 +729,18 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Équipe très sympa. Mets exceptionnels. Et super rapport qualité prix. Je ne peux que conseiller."
+                    "comment": "Équipe très sympa. Mets exceptionnels. Et super rapport qualité prix. Je ne peux que conseiller.",
+                    "name": "Rocket Raccoon"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon moment passé au Baysca en ce vendredi soir. Tout était parfait : dans l'assiette (cuisine excellente) et en salle (équipe très sympathique et disponible). Directement dans mon top 3 !"
+                    "comment": "Très bon moment passé au Baysca en ce vendredi soir. Tout était parfait : dans l'assiette (cuisine excellente) et en salle (équipe très sympathique et disponible). Directement dans mon top 3 !",
+                    "name": "Shen Kang"
                 },
                 {
                     "stars": 5,
-                    "comment": "Cadre calme et agreable. Les personnes sont très accueillantes et souriantes. Pour les plats, un seul mot 'une tuerie' c'est fin c'est frais ! Je recommande !"
+                    "comment": "Cadre calme et agreable. Les personnes sont très accueillantes et souriantes. Pour les plats, un seul mot 'une tuerie' c'est fin c'est frais ! Je recommande !",
+                    "name": "Alex Bryant"
                 }
             ]
         },
@@ -653,23 +753,28 @@
             "ratings": [
                 {
                     "stars": 2,
-                    "comment": "Jour de pluie oblige nous avons du y entrer... quel malheur nous a pris ... service pas très agréable et la prise de commande c'est faites attendre . Sans parler de l'odeur de tabac/cigare froid désagréable à souhait et qui embaume tout l'intérieur... une chose est sûre c'est DOMMAGE pour un endroit qui a du potentiel ...."
+                    "comment": "Jour de pluie oblige nous avons du y entrer... quel malheur nous a pris ... service pas très agréable et la prise de commande c'est faites attendre . Sans parler de l'odeur de tabac/cigare froid désagréable à souhait et qui embaume tout l'intérieur... une chose est sûre c'est DOMMAGE pour un endroit qui a du potentiel ....",
+                    "name": "Annot Chalut"
                 },
                 {
                     "stars": 3,
-                    "comment": "Une jolie vue, une terrasse bien agréable. Un service très correct. Sur le contenu, je n' ai pas été totalement emballé, repas honnête sans plus."
+                    "comment": "Une jolie vue, une terrasse bien agréable. Un service très correct. Sur le contenu, je n' ai pas été totalement emballé, repas honnête sans plus.",
+                    "name": "Szász Dorka"
                 },
                 {
                     "stars": 3,
-                    "comment": "Lieu très aceuillant et très belle vue malgré cella un service plutôt long. Tarifs élevés. L'écran géant n'a pas été utilisé a bon essayant"
+                    "comment": "Lieu très aceuillant et très belle vue malgré cella un service plutôt long. Tarifs élevés. L'écran géant n'a pas été utilisé a bon essayant",
+                    "name": "Elise Martin"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellente adresse. Le cadre est très beau et calme. Equipe charmante et on y mange très bien !"
+                    "comment": "Excellente adresse. Le cadre est très beau et calme. Equipe charmante et on y mange très bien !",
+                    "name": "Percy Beaudry"
                 },
                 {
                     "stars": 5,
-                    "comment": "Terrasse agréable au bord de l'eau. Le personnel est très avenant. Plats sans chichis mais bien préparés et d'un bon rapport qualité/prix. Bonne adresse pour les soirées d'été."
+                    "comment": "Terrasse agréable au bord de l'eau. Le personnel est très avenant. Plats sans chichis mais bien préparés et d'un bon rapport qualité/prix. Bonne adresse pour les soirées d'été.",
+                    "name": "Forrest Begin"
                 }
             ]
         },
@@ -682,19 +787,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Très bon restaurant à refaire. Personnel très gentil."
+                    "comment": "Très bon restaurant à refaire. Personnel très gentil.",
+                    "name": "Germaine Doyon"
                 },
                 {
                     "stars": 4,
-                    "comment": "Dommage que des nappes blanches ornent pas les tables,sinon bonne nourriture dans les assiettes,pas de crème,pas trop de beurre Pour masquer la  mauvaise cuisine"
+                    "comment": "Dommage que des nappes blanches ornent pas les tables,sinon bonne nourriture dans les assiettes,pas de crème,pas trop de beurre Pour masquer la  mauvaise cuisine",
+                    "name": "Brian J. Stokes"
                 },
                 {
                     "stars": 5,
-                    "comment": "Un super restaurant gastronomique. Un personnel accueillant. Une bonne carte. Raffinée. Un cadre plaisant et agréable. On sent le raffinement dans cet endroit. On y reviendra avec plaisir."
+                    "comment": "Un super restaurant gastronomique. Un personnel accueillant. Une bonne carte. Raffinée. Un cadre plaisant et agréable. On sent le raffinement dans cet endroit. On y reviendra avec plaisir.",
+                    "name": "Saági Frigyes"
                 },
                 {
                     "stars": 5,
-                    "comment": "Nous avons passé une très bonne soirée très bons conseils pour accorder le vin au repas, serveuse charmante et repas excellent."
+                    "comment": "Nous avons passé une très bonne soirée très bons conseils pour accorder le vin au repas, serveuse charmante et repas excellent.",
+                    "name": "Micheal D. Landau"
                 }
             ]
         },
@@ -707,23 +816,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "17 années d'existence un grand regret de ne pas avoir été avant !! Ce fut un régal excellent, Cadre idéal personnels dynamique ambiance chaleureuse. . il ne manquait plus que la neige."
+                    "comment": "17 années d'existence un grand regret de ne pas avoir été avant !! Ce fut un régal excellent, Cadre idéal personnels dynamique ambiance chaleureuse. . il ne manquait plus que la neige.",
+                    "name": "Peter Parker"
                 },
                 {
                     "stars": 5,
-                    "comment": "Personnel acceuillant et amiableExcellent en qualité prix. Ambiance conviviale. Je recommande vivement."
+                    "comment": "Personnel acceuillant et amiableExcellent en qualité prix. Ambiance conviviale. Je recommande vivement.",
+                    "name": "Daniel C. Schou"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon restaurant , juste le personnels un petit peut presser de terminer ;-)"
+                    "comment": "Très bon restaurant , juste le personnels un petit peut presser de terminer ;-)",
+                    "name": "Nick Fury"
                 },
                 {
                     "stars": 2,
-                    "comment": "Le restaurant est joli et la raclette plutôt bonne. cependant le service est mauvais: très long et très peu aimable. mauvaise surprise: les prix sur l'addition ne correspondent pas à ceux affichés sur la carte (pour les boissons)."
+                    "comment": "Le restaurant est joli et la raclette plutôt bonne. cependant le service est mauvais: très long et très peu aimable. mauvaise surprise: les prix sur l'addition ne correspondent pas à ceux affichés sur la carte (pour les boissons).",
+                    "name": "John A. Melendez"
                 },
                 {
                     "stars": 3,
-                    "comment": "Pour la qualité de la matière première, je mettrais 5 étoiles. Toutefois le service et l'accueil de la patronne me donnent juste envie de faire demi tour. C'est dommage"
+                    "comment": "Pour la qualité de la matière première, je mettrais 5 étoiles. Toutefois le service et l'accueil de la patronne me donnent juste envie de faire demi tour. C'est dommage",
+                    "name": "Phil Coulson"
                 }
             ]
         },
@@ -736,15 +850,18 @@
             "ratings": [
                 {
                     "stars": 1,
-                    "comment": "15€90 pour un petit bout de blanc de poulet et de porc avec des frites et un peu de sauce au maroilles.. c'est sûr, ils font de la marge.. je n'y retournerai pas"
+                    "comment": "15€90 pour un petit bout de blanc de poulet et de porc avec des frites et un peu de sauce au maroilles.. c'est sûr, ils font de la marge.. je n'y retournerai pas",
+                    "name": "Genji Liu"
                 },
                 {
                     "stars": 3,
-                    "comment": "Ce restaurant est magnifique. Le personnel est attentif. La cuisine simple et bonne."
+                    "comment": "Ce restaurant est magnifique. Le personnel est attentif. La cuisine simple et bonne.",
+                    "name": "Landers Brunelle"
                 },
                 {
                     "stars": 5,
-                    "comment": "C'est bon, je recommande !"
+                    "comment": "C'est bon, je recommande !",
+                    "name": "Landers Veilleux"
                 }
             ]
         },
@@ -757,27 +874,33 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Toujours aussi agréable à venir déjeuner dans ce restaurant. Réservation obligatoire car on ne sait jamais si la salle est complété ou non. Restauration très orientée légumes anciens mais fine. Accueil toujours aussi charmant."
+                    "comment": "Toujours aussi agréable à venir déjeuner dans ce restaurant. Réservation obligatoire car on ne sait jamais si la salle est complété ou non. Restauration très orientée légumes anciens mais fine. Accueil toujours aussi charmant.",
+                    "name": "Sebastian Winterbotham"
                 },
                 {
                     "stars": 5,
-                    "comment": "Lieu atypique mais tellement chaleureux. N'hesitez pas à reserver."
+                    "comment": "Lieu atypique mais tellement chaleureux. N'hesitez pas à reserver.",
+                    "name": "Charlie Power"
                 },
                 {
                     "stars": 5,
-                    "comment": "Vraiment top ! on y mange bien et le service est bien géré nous y venons pas souvent mais c'est un vrai plaisir à chaque fois :)"
+                    "comment": "Vraiment top ! on y mange bien et le service est bien géré nous y venons pas souvent mais c'est un vrai plaisir à chaque fois :)",
+                    "name": "Nicolas Bureau"
                 },
                 {
                     "stars": 4,
-                    "comment": "Bonne nourriture. Bon accueil"
+                    "comment": "Bonne nourriture. Bon accueil",
+                    "name": "Kai Kelly"
                 },
                 {
                     "stars": 4,
-                    "comment": "Cuisine très correcte, service un peu long"
+                    "comment": "Cuisine très correcte, service un peu long",
+                    "name": "Françoise Allaire"
                 },
                 {
                     "stars": 4,
-                    "comment":"Endroit sympatique, cuisine bonne"
+                    "comment":"Endroit sympatique, cuisine bonne",
+                    "name": "Ferdinand W. Maynard"
                 }
             ]
         },
@@ -790,19 +913,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Le propriétaire et ses collègues sont accueillant et très respectueux les burgers diverses et variées sont très bon accompagnés de frite qui sont très bonne aussi. Sans oublier les tenders et les tiramisus sont juste excellent donc je conseille à 100% le 73"
+                    "comment": "Le propriétaire et ses collègues sont accueillant et très respectueux les burgers diverses et variées sont très bon accompagnés de frite qui sont très bonne aussi. Sans oublier les tenders et les tiramisus sont juste excellent donc je conseille à 100% le 73",
+                    "name": "Kristoffer Hole"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bon accueil, viande excellente, très bonne cuisson, frites bien croustillantes, rapport qualité prix imbattable, je recommande vivement. Nous reviendrons prochainement, félicitations à vous."
+                    "comment": "Très bon accueil, viande excellente, très bonne cuisson, frites bien croustillantes, rapport qualité prix imbattable, je recommande vivement. Nous reviendrons prochainement, félicitations à vous.",
+                    "name": "Édith Méthot"
                 },
                 {
                     "stars": 5,
-                    "comment": "Commande ce jour via uber eat. Sandwichs et frites fraîches maison savoureux!  Tout était vraiment parfait."
+                    "comment": "Commande ce jour via uber eat. Sandwichs et frites fraîches maison savoureux!  Tout était vraiment parfait.",
+                    "name": "Bruce Banner"
                 },
                 {
                     "stars": 1,
-                    "comment": "Je ne recommande pas du tout !! Je commande sur le site à 13h, je procède au paiement. On me dit livraison 45min max... à 14h15 toujours de pas nouvelles... On se rend sur place, à 14h20, c’est fermé. Non seulement, le resto ferme avant l’heure, et en plus on paye sans être livrés. On appelle ça du vol très clairement."
+                    "comment": "Je ne recommande pas du tout !! Je commande sur le site à 13h, je procède au paiement. On me dit livraison 45min max... à 14h15 toujours de pas nouvelles... On se rend sur place, à 14h20, c’est fermé. Non seulement, le resto ferme avant l’heure, et en plus on paye sans être livrés. On appelle ça du vol très clairement.",
+                    "name": "Fredrik Haugseth"
                 }
             ]
         },
@@ -815,19 +942,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "C'était vraiment très bon. Très bon accueil. Petit détail, si vous n'aimez pas la fumée de cigarette, lieu à éviter la terrasse est presque totalement fermé, ce qui fait que l'on est envahie pas l'odeur de la clope quand quelqu'un fume et c'est pas agréable en mangeant. Les prix sont raisonnables vu la qualité !"
+                    "comment": "C'était vraiment très bon. Très bon accueil. Petit détail, si vous n'aimez pas la fumée de cigarette, lieu à éviter la terrasse est presque totalement fermé, ce qui fait que l'on est envahie pas l'odeur de la clope quand quelqu'un fume et c'est pas agréable en mangeant. Les prix sont raisonnables vu la qualité !",
+                    "name": "Nathan Cornwall"
                 },
                 {
                     "stars": 4,
-                    "comment": "Un restaurant incontournable de Saint André. Il ne faut pas se fier à la façade, ni à la rue... Une fois la porte d'entrée passée on découvre un lieu surprenant. La cuisine est excellente, et le rapport qualité prix correct."
+                    "comment": "Un restaurant incontournable de Saint André. Il ne faut pas se fier à la façade, ni à la rue... Une fois la porte d'entrée passée on découvre un lieu surprenant. La cuisine est excellente, et le rapport qualité prix correct.",
+                    "name": "Hajdu Ugor"
                 },
                 {
                     "stars": 3,
-                    "comment": "L'ensemble du repas était correct. Mais la terrasse soi disant ouverte, les personnes fumant sur la terrasse, dérangent les non fumeurs. Le baba au Rhum était sec. La quantité de frites était un peu juste."
+                    "comment": "L'ensemble du repas était correct. Mais la terrasse soi disant ouverte, les personnes fumant sur la terrasse, dérangent les non fumeurs. Le baba au Rhum était sec. La quantité de frites était un peu juste.",
+                    "name": "Wilson Fisk"
                 },
                 {
                     "stars": 5,
-                    "comment": "J'y suis allée pour une Garden organisée un dimanche. Je ne peux pas juger la nourriture du coup. Mais lieu agréable avec une belle terrasse. Des toilettes d'une rare propreté !"
+                    "comment": "J'y suis allée pour une Garden organisée un dimanche. Je ne peux pas juger la nourriture du coup. Mais lieu agréable avec une belle terrasse. Des toilettes d'une rare propreté !",
+                    "name": "Connor Sneddon"
                 }
             ]
         },
@@ -840,31 +971,38 @@
             "ratings": [
                 {
                     "stars": 1,
-                    "comment": "Lieu intéressant mais expérience gâchée par le service. Rien n’est clair dès l’entrée. Beaucoup des jeux sont déjà en maintenance. Le personnel est invisible. Et ne parlons pas de la « cuisine »… dommage"
+                    "comment": "Lieu intéressant mais expérience gâchée par le service. Rien n’est clair dès l’entrée. Beaucoup des jeux sont déjà en maintenance. Le personnel est invisible. Et ne parlons pas de la « cuisine »… dommage",
+                    "name": "Casey Douglas"
                 },
                 {
                     "stars": 1,
-                    "comment": "Concept prometteur et alléchant sur le papier, pourtant très décevant dans la réalité. Nous sommes venus 3 fois et portons le même constat à chacun de nos passages : le service est lamentable. Nous avons très clairement l’impression de déranger l’ensemble du personnel durant la prise de chacune de nos commandes et de notre partie de bowling. Les jeux d’arcade sont une bonne idée mais sur plusieurs jeux testés, nous avons rencontré des problèmes techniques (partie non prise en compte et débitée, manque de balles...). Bref, ce n’est pas un endroit que nous recommanderons tant que le professionnalisme et l’amabilité du staff n’aura pas évolué. Port du masque approximatif"
+                    "comment": "Concept prometteur et alléchant sur le papier, pourtant très décevant dans la réalité. Nous sommes venus 3 fois et portons le même constat à chacun de nos passages : le service est lamentable. Nous avons très clairement l’impression de déranger l’ensemble du personnel durant la prise de chacune de nos commandes et de notre partie de bowling. Les jeux d’arcade sont une bonne idée mais sur plusieurs jeux testés, nous avons rencontré des problèmes techniques (partie non prise en compte et débitée, manque de balles...). Bref, ce n’est pas un endroit que nous recommanderons tant que le professionnalisme et l’amabilité du staff n’aura pas évolué. Port du masque approximatif",
+                    "name": "Nicoline J. Thygesen"
                 },
                 {
                     "stars": 3,
-                    "comment": "Concept sympa. Le jeu de réalité virtuel est super. Nous avons mangé au restaurant. Nos pizzas étaient bonnes sauf pour la campagnarde  le jambon n'était pas très bon (beaucoup de morceaux durs). Par contre tout est très cher, que ce soit le restaurant, les boissons, ou les jeux d'arcades. C'est vraiment dommage. Il faut compter entre 1,5 et 2 euros pour une partie (et très rapide). Au niveau du restaurant nous avons payé 96 euros pour 4 pizzas et 5 boissons.  Et par contre ça serait bien que le beau frère du gérant évite de traiter les clients de tocards et évite de faire le nerveux en les bousculant car monsieur à perdu au flipper !!!"
+                    "comment": "Concept sympa. Le jeu de réalité virtuel est super. Nous avons mangé au restaurant. Nos pizzas étaient bonnes sauf pour la campagnarde  le jambon n'était pas très bon (beaucoup de morceaux durs). Par contre tout est très cher, que ce soit le restaurant, les boissons, ou les jeux d'arcades. C'est vraiment dommage. Il faut compter entre 1,5 et 2 euros pour une partie (et très rapide). Au niveau du restaurant nous avons payé 96 euros pour 4 pizzas et 5 boissons.  Et par contre ça serait bien que le beau frère du gérant évite de traiter les clients de tocards et évite de faire le nerveux en les bousculant car monsieur à perdu au flipper !!!",
+                    "name": "Patrick Bolton"
                 },
                 {
                     "stars": 1,
-                    "comment": "Personnel au bar très désagréable, on a attendu une heure avant qu’une personne prenne notre commande et finalement elle arrive incomplète car plus de stock. Aussi plus aucun gel hydroalcoolique donc niveau sanitaire on repassera. Aussi au moins 4 5 jeux qui ne fonctionnent plus. Bref à éviter."
+                    "comment": "Personnel au bar très désagréable, on a attendu une heure avant qu’une personne prenne notre commande et finalement elle arrive incomplète car plus de stock. Aussi plus aucun gel hydroalcoolique donc niveau sanitaire on repassera. Aussi au moins 4 5 jeux qui ne fonctionnent plus. Bref à éviter.",
+                    "name": "Alfred Varieur"
                 },
                 {
                     "stars": 5,
-                    "comment": "Nous sommes venus du Luxembourg et avons profité de notre séjour pour découvrir ce lieu. Le restaurant est magnifique et la nourriture plutôt sympa. Les cocktails sont excellents. L'équipe est pro et sympathique et enfin le lieu est très bien pensé pour passer  une superbe soirée. Bonne continuation :)"
+                    "comment": "Nous sommes venus du Luxembourg et avons profité de notre séjour pour découvrir ce lieu. Le restaurant est magnifique et la nourriture plutôt sympa. Les cocktails sont excellents. L'équipe est pro et sympathique et enfin le lieu est très bien pensé pour passer  une superbe soirée. Bonne continuation :)",
+                    "name": "Jodie Sullivan"
                 },
                 {
                     "stars": 5,
-                    "comment": "Vraiment pas mal. Trouvez un serveur et vous trouverez une superbe soirée. Tout a marché ce soir pour nous, mais j'ai raté mon strike."
+                    "comment": "Vraiment pas mal. Trouvez un serveur et vous trouverez une superbe soirée. Tout a marché ce soir pour nous, mais j'ai raté mon strike.",
+                    "name": "Victor L. Kristensen"
                 },
                 {
                     "stars": 5,
-                    "comment":"Expérience au top ! Nous avons passé un journée entière dans le complexe entre parties de bowling 🎳 et billards baby foot et autres jeux d'arcade ! Gros coups de coeur pr l'expérience en réalité virtuelle qui est super immersive surtout la partie avec les zombies. En ce qui concerne le restaurant c'est frais de qualité et surtout il y a un large choix pour les végétariens. La burrata en entrée est délicieuse. A faire si vous êtes de passage à Lille."
+                    "comment":"Expérience au top ! Nous avons passé un journée entière dans le complexe entre parties de bowling 🎳 et billards baby foot et autres jeux d'arcade ! Gros coups de coeur pr l'expérience en réalité virtuelle qui est super immersive surtout la partie avec les zombies. En ce qui concerne le restaurant c'est frais de qualité et surtout il y a un large choix pour les végétariens. La burrata en entrée est délicieuse. A faire si vous êtes de passage à Lille.",
+                    "name": "Lydia Haynes"
                 }
             ]
         },
@@ -877,23 +1015,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Super endroit. Plats excellents. Décor original. Accueil parfait jusqu'au bout."
+                    "comment": "Super endroit. Plats excellents. Décor original. Accueil parfait jusqu'au bout.",
+                    "name": "Agramant Chatigny"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent.. Vraiment comme à la maison 🏡 mais sans faire à manger 😁 bravo 👏 pour l'accueil et le service 👌une première réussie"
+                    "comment": "Excellent.. Vraiment comme à la maison 🏡 mais sans faire à manger 😁 bravo 👏 pour l'accueil et le service 👌une première réussie",
+                    "name": "Dreux Trépanier"
                 },
                 {
                     "stars": 5,
-                    "comment": "Un.cadre magnifique,  une bonne ambiance,  tout est fait maison,  le personnel super  et le digestif surprenant"
+                    "comment": "Un.cadre magnifique,  une bonne ambiance,  tout est fait maison,  le personnel super  et le digestif surprenant",
+                    "name": "Julia Eliassen"
                 },
                 {
                     "stars": 4,
-                    "comment": "Estaminet sympa, plats de ch'nord bien sûr. Bon rapport qualité prix"
+                    "comment": "Estaminet sympa, plats de ch'nord bien sûr. Bon rapport qualité prix",
+                    "name": "Mulan Chen"
                 },
                 {
                     "stars": 4,
-                    "comment": "Super sympa. Très bien manger, personnel très agréable et décor atypique... Un bel estaminet"
+                    "comment": "Super sympa. Très bien manger, personnel très agréable et décor atypique... Un bel estaminet",
+                    "name": "Hélène Lang"
                 }
             ]
         },
@@ -906,19 +1049,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "La meilleure pizza que j'ai trouvé à ce jour ! Ma préférée Melanzana pleine de goût relevée et équilibrée à la fois. Bravo !"
+                    "comment": "La meilleure pizza que j'ai trouvé à ce jour ! Ma préférée Melanzana pleine de goût relevée et équilibrée à la fois. Bravo !",
+                    "name": "Carol Danvers"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellentes pizzas. J attends de goûter les cannelonis (recette de la grand-mère 😉)"
+                    "comment": "Excellentes pizzas. J attends de goûter les cannelonis (recette de la grand-mère 😉)",
+                    "name": "Scott Lang"
                 },
                 {
                     "stars": 4,
-                    "comment": "Superbe accueil. Les pizzas sont délicieuses comme toujours"
+                    "comment": "Superbe accueil. Les pizzas sont délicieuses comme toujours",
+                    "name": "Eliot Tachel"
                 },
                 {
                     "stars": 4,
-                    "comment": "Très bonnes pizzas, accueil sympathique et service rapide. On recommande"
+                    "comment": "Très bonnes pizzas, accueil sympathique et service rapide. On recommande",
+                    "name": "Sam Wilson"
                 }
             ]
         },
@@ -931,19 +1078,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Un ptit coin bien sympa ou passer un doux moment autour d'un bon repas, le tout avec un service qui reste à l'écoute. Je ne peux que conseiller 👌"
+                    "comment": "Un ptit coin bien sympa ou passer un doux moment autour d'un bon repas, le tout avec un service qui reste à l'écoute. Je ne peux que conseiller 👌",
+                    "name": "Ethan Wood"
                 },
                 {
                     "stars": 5,
-                    "comment": "Très bonne accueil aimable et serviable"
+                    "comment": "Très bonne accueil aimable et serviable",
+                    "name": "Luc Bourgeois"
                 },
                 {
                     "stars": 5,
-                    "comment": "J'ai passé une super moment, équipe agréable et toujours bien accueilli par le patron, la cuisine au top, je vous recommande !"
+                    "comment": "J'ai passé une super moment, équipe agréable et toujours bien accueilli par le patron, la cuisine au top, je vous recommande !",
+                    "name": "Mireille Grondin"
                 },
                 {
                     "stars": 1,
-                    "comment":"Déçu du service lors de ma venue"
+                    "comment":"Déçu du service lors de ma venue",
+                    "name": "Patrick Hammer"
                 }
             ]
         },
@@ -956,19 +1107,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Très belle découverte. Un lieu qui respire la fête et la bonne ambiance. Envie d'y revenir vite"
+                    "comment": "Très belle découverte. Un lieu qui respire la fête et la bonne ambiance. Envie d'y revenir vite",
+                    "name": "Laurits M. Friis"
                 },
                 {
                     "stars": 4,
-                    "comment": "Très bel endroit retro. souvenir de nos années 80. une belle terrasse extérieure et une carte variée. bon moment"
+                    "comment": "Très bel endroit retro. souvenir de nos années 80. une belle terrasse extérieure et une carte variée. bon moment",
+                    "name": "Łucja Piotrowska"
                 },
                 {
                     "stars": 5,
-                    "comment": "Nous avons testé des plats à emporter lors du marché des restaurateurs sur lambersart, un vrai régal ! Nous nous sommes laissés tenter par du cabillaud et des gnocchis de pomme de terre aux épinards et champignons ! Tres bon même réchauffer"
+                    "comment": "Nous avons testé des plats à emporter lors du marché des restaurateurs sur lambersart, un vrai régal ! Nous nous sommes laissés tenter par du cabillaud et des gnocchis de pomme de terre aux épinards et champignons ! Tres bon même réchauffer",
+                    "name": "Michelle T. Fazio"
                 },
                 {
                     "stars": 3,
-                    "comment":"Bon, pas très cher. Je n'y ferai pas un repas de fête mais le midi, en pause méridienne, c'est correct. L'ambiance peut perturbée un peu compte tenu des anciennes activités du site et des affiches qui rappellent cette histoire"
+                    "comment":"Bon, pas très cher. Je n'y ferai pas un repas de fête mais le midi, en pause méridienne, c'est correct. L'ambiance peut perturbée un peu compte tenu des anciennes activités du site et des affiches qui rappellent cette histoire",
+                    "name": "Magnus S. Henriksen"
                 }
             ]
         },
@@ -981,19 +1136,23 @@
             "ratings": [
                 {
                     "stars": 3,
-                    "comment": "Longue attente malgré une réservation. Table pour 3 exiguë . Cuisine locale correcte sans plus. Un employé supplémentaire ne serait pas de trop pour cet établissement passablement visité. Mieux dans le secteur."
+                    "comment": "Longue attente malgré une réservation. Table pour 3 exiguë . Cuisine locale correcte sans plus. Un employé supplémentaire ne serait pas de trop pour cet établissement passablement visité. Mieux dans le secteur.",
+                    "name": "Arnou Marchesseault"
                 },
                 {
                     "stars": 3,
-                    "comment": "Lieu atypique carte qui mériterai d'être réduite aux produits locaux et pensez aux enfants plats un peu excessifs actuellement. Respect des règles sanitaires à revoir masque obligatoire pour les serveurs mais inexistants. Tout le monde est sympathique et l'endroit mérite de se développer si l'écoute des clients est respecté. Les choses que l'on dit peuvent faire avancer si on prend le recul nécessaire. Bonne continuation et à très bientôt"
+                    "comment": "Lieu atypique carte qui mériterai d'être réduite aux produits locaux et pensez aux enfants plats un peu excessifs actuellement. Respect des règles sanitaires à revoir masque obligatoire pour les serveurs mais inexistants. Tout le monde est sympathique et l'endroit mérite de se développer si l'écoute des clients est respecté. Les choses que l'on dit peuvent faire avancer si on prend le recul nécessaire. Bonne continuation et à très bientôt",
+                    "name": "Alfie Taylor"
                 },
                 {
                     "stars": 4,
-                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre."
+                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre.",
+                    "name": "Demi Bériault"
                 },
                 {
                     "stars": 5,
-                    "comment":"Des vraies frites maison ! Miam !"
+                    "comment":"Des vraies frites maison ! Miam !",
+                    "name": "Xarles Brisebois"
                 }
             ]
         },
@@ -1006,19 +1165,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "On se régale ! Le service est de grande qualité. Des réductions salées, originales sont servies. Un restaurant où il fait bon aller..."
+                    "comment": "On se régale ! Le service est de grande qualité. Des réductions salées, originales sont servies. Un restaurant où il fait bon aller...",
+                    "name": "Shang-Chi"
                 },
                 {
                     "stars": 5,
-                    "comment": "Quel bonheur de découvrir cet endroit magnifique. Après des mois de click and collect très bien réalisés, nous avons pu enfin bénéficier d'un service à table. Très belle adresse, je recommande. Pour les vins, la carte n'est pas longue et c'est tant mieux, l'essentiel y est. Bravo"
+                    "comment": "Quel bonheur de découvrir cet endroit magnifique. Après des mois de click and collect très bien réalisés, nous avons pu enfin bénéficier d'un service à table. Très belle adresse, je recommande. Pour les vins, la carte n'est pas longue et c'est tant mieux, l'essentiel y est. Bravo",
+                    "name": "Garland Bondy"
                 },
                 {
                     "stars": 4,
-                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre."
+                    "comment": "Prix corrects. Personnel agréable. Terrasse agréable également. L'avantage est le retrait et le calme du restaurant. Idéal également pour boire un verre.",
+                    "name": "Cai Wan"
                 },
                 {
                     "stars": 3,
-                    "comment":"Pas de conseil pour les vins, manque un sommelier. Le repas sympa. Rapport qualité prix 7 /10"
+                    "comment":"Pas de conseil pour les vins, manque un sommelier. Le repas sympa. Rapport qualité prix 7 /10",
+                    "name": "Sarah Marshall"
                 }
             ]
         },
@@ -1031,23 +1194,28 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Tout simplement ce qui se fait de mieux au niveau restauration dans l'agglomération lilloise. J'ai eu l'occasion de prendre un repas à emporté pour Noël. J'ai était bluffé tellement bluffé que j'ai oublie de prendre en photo le repas c'est pas grave j'ai pris le dessert."
+                    "comment": "Tout simplement ce qui se fait de mieux au niveau restauration dans l'agglomération lilloise. J'ai eu l'occasion de prendre un repas à emporté pour Noël. J'ai était bluffé tellement bluffé que j'ai oublie de prendre en photo le repas c'est pas grave j'ai pris le dessert.",
+                    "name": "Gilbert D. Chew"
                 },
                 {
                     "stars": 5,
-                    "comment": "Cuisine raffinée et très créative. Des associations très stimulantes pour les papilles et l'esprit. Accueil chaleureux. Nous avons plaisir à y retourner régulièrement."
+                    "comment": "Cuisine raffinée et très créative. Des associations très stimulantes pour les papilles et l'esprit. Accueil chaleureux. Nous avons plaisir à y retourner régulièrement.",
+                    "name": "Johan Haugland"
                 },
                 {
                     "stars": 5,
-                    "comment": "Une très belle découverte. Un menu en 7 plats créatif et inspiré à partir des produits de saison. Un accueil très agréable et détendu. Un accord mets et vins parfait. Un cadre moderne. À ne rater sous aucun prétexte !"
+                    "comment": "Une très belle découverte. Un menu en 7 plats créatif et inspiré à partir des produits de saison. Un accueil très agréable et détendu. Un accord mets et vins parfait. Un cadre moderne. À ne rater sous aucun prétexte !",
+                    "name": "Neville Moreau"
                 },
                 {
                     "stars": 5,
-                    "comment":"Que du bonheur d'aller à l'empreinte....cuisine originale et super bien servie par Inès et son équipe...Nous n'attendons qu'une occasion pour y retourner..."
+                    "comment":"Que du bonheur d'aller à l'empreinte....cuisine originale et super bien servie par Inès et son équipe...Nous n'attendons qu'une occasion pour y retourner...",
+                    "name": "Pryor Parizeau"
                 },
                 {
                     "stars": 4,
-                    "comment":"Toujours une bonne expérience ! Une valeur sûre"
+                    "comment":"Toujours une bonne expérience ! Une valeur sûre",
+                    "name": "Joseph F. Matta"
                 }
             ]
         },
@@ -1060,19 +1228,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Sans aucune faute ce midi. Service impeccable, notamment le chef de salle. Découverte de vins merveilleux et abordables. Menu frais et copieux."
+                    "comment": "Sans aucune faute ce midi. Service impeccable, notamment le chef de salle. Découverte de vins merveilleux et abordables. Menu frais et copieux.",
+                    "name": "Evelyn Burns"
                 },
                 {
                     "stars": 5,
-                    "comment": "Cuisine imaginative et subtile . Chef qui travaille avec des producteurs locaux. Service discret et efficace"
+                    "comment": "Cuisine imaginative et subtile . Chef qui travaille avec des producteurs locaux. Service discret et efficace",
+                    "name": "Éléonore Lampron"
                 },
                 {
                     "stars": 5,
-                    "comment": "Une adresse de qualité située dans un cadre verdoyant. Un chef inspiré qui saura vous surprendre par des mariages de saveur surprenants."
+                    "comment": "Une adresse de qualité située dans un cadre verdoyant. Un chef inspiré qui saura vous surprendre par des mariages de saveur surprenants.",
+                    "name": "Stephen Strange"
                 },
                 {
                     "stars": 4,
-                    "comment":"Cadre extérieur très sympathique, intérieur légèrement plus simple mais toujours décoré avec goûts. Nous avons choisis le menu à la carte (mes 2 menus dégustations ne nous attirés pas). Plats de qualités et très raffinés, le fois gras confit, le pigeon et me dessert pistache cerise ont étaient une révélation culinaire. Seule 'déception' sur la viande mâturé et me bavarois au maroilles, un manque de saveurs. Les prix restent raisonnable pour ma qualité du service et des produits."
+                    "comment":"Cadre extérieur très sympathique, intérieur légèrement plus simple mais toujours décoré avec goûts. Nous avons choisis le menu à la carte (mes 2 menus dégustations ne nous attirés pas). Plats de qualités et très raffinés, le fois gras confit, le pigeon et me dessert pistache cerise ont étaient une révélation culinaire. Seule 'déception' sur la viande mâturé et me bavarois au maroilles, un manque de saveurs. Les prix restent raisonnable pour ma qualité du service et des produits.",
+                    "name": "Beatrice Kelly"
                 }
             ]
         },
@@ -1085,19 +1257,23 @@
             "ratings": [
                 {
                     "stars": 5,
-                    "comment": "Une excellente table, service impeccable et des prix raisonnables."
+                    "comment": "Une excellente table, service impeccable et des prix raisonnables.",
+                    "name": "Reagan McMillan"
                 },
                 {
                     "stars": 4,
-                    "comment": "Toujours aussi bon!"
+                    "comment": "Toujours aussi bon!",
+                    "name": "Nadine Rochon"
                 },
                 {
                     "stars": 5,
-                    "comment": "Excellent restaurant, on a passé un super moment. C'était très bon. Beau cadre et on y est très bien accueilli. C'était une première mais certainement pas la dernière. Je vous le conseille vivement."
+                    "comment": "Excellent restaurant, on a passé un super moment. C'était très bon. Beau cadre et on y est très bien accueilli. C'était une première mais certainement pas la dernière. Je vous le conseille vivement.",
+                    "name": "Belisarda Robitaille"
                 },
                 {
                     "stars": 4,
-                    "comment":"Très bonne expérience culinaire. Personnel un peu jeune qui doit être encouragé car ils mettent du coeur à leur travail et ne peuvent que progresser. Je conseille cet établissement."
+                    "comment":"Très bonne expérience culinaire. Personnel un peu jeune qui doit être encouragé car ils mettent du coeur à leur travail et ne peuvent que progresser. Je conseille cet établissement.",
+                    "name": "Erin Davidson"
                 }
             ]
         }

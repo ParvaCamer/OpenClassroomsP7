@@ -1,25 +1,24 @@
 <template>
   <div class="infos" v-show="showInfo">
-    <div v-for="(comment, index) in restoComment" :item="comment" :key="index">
+    <div v-for="comment in restoComment" :key="comment">
       <ul
         v-for="(resto, index) in restos"
         :key="index"
-        v-show="comment === index"
+        v-show="comment == index"
       >
-        {{resto.restaurantName}} :
-        <li
-          class="liInfo"
+        <h2>{{resto.restaurantName}} :</h2>
+        <div
           v-for="restoComment in resto.infoComment"
           :key="restoComment"
         >
-        {{ restoComment }}
-        </li>
+        {{ restoComment }} 
+        </div>
       </ul>
     </div>
     <div class="textarea">
-      <span> Ajouter un avis :</span>
+      <span class="spanAvis"> Ajouter un avis :</span>
       <p style="white-space: pre-line;"> {{ message }} </p>
-      <input v-model="message" placeholder="Appuyez sur Entrée pour valider">
+      <input id="myInput" v-model="message" placeholder="Appuyez sur Entrée pour valider" v-on:keyup.enter="pressEnter">
     </div>
     <div class="btnInfo">
       <button v-on:click="hideInfo" class="btn">Fermer</button>
@@ -48,7 +47,7 @@ export default {
     return {
       restos: [],
       restoComment: [],
-      showInfo: true,
+      showInfo: false,
       message: "",
     };
   },
@@ -60,13 +59,10 @@ export default {
 
         this.restos.forEach(function (oneResto) {
           oneResto.infoComment = [];
-          oneResto.allStars = [];
           oneResto.ratings.forEach(function (infos) {
-            oneResto.infoComment.push(infos.comment);
+            oneResto.infoComment.push("~ " + infos.name + " : "+ " mon avis : " + infos.stars + " \u2605 ~");
+            oneResto.infoComment.push("Commentaire : " + infos.comment)
           });
-          oneResto.ratings.forEach(function (stars) {
-            oneResto.allStars.push(stars.stars)
-          })
         });
       })
       .catch((error) => console.log(error));
@@ -86,6 +82,8 @@ export default {
       this.showInfo = false;
       this.$emit("hideInfo", this.showInfo);
     },
+    pressEnter(){
+    }
   },
 };
 </script>
@@ -107,9 +105,6 @@ export default {
 .ulInfo{
   left: 50%
 }
-.liInfo {
-  list-style-type: circle;
-}
 .btnInfo {
   position:relative;
   height: 10%;
@@ -120,7 +115,15 @@ export default {
   position: relative;
 }
 .btn:hover{
-  color:grey;
+  color:rgb(63, 60, 60);
   border-style:groove
+}
+.textarea {
+  position: relative;
+  top:1%;
+}
+.spanAvis{
+  text-decoration: underline;
+  font-size: 17px;
 }
 </style>

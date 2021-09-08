@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
-      zoom: 15,
+      zoom: 16,
       userLocation: {},
       restos: [],
       icon: L.icon({
@@ -97,6 +97,7 @@ export default {
     },
     centerUpdated(center) {
       this.center = center;
+      console.log(this.center)
     },
     async getUserPosition() {
       //for the userMarker
