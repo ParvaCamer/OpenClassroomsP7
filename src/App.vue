@@ -1,8 +1,19 @@
 <template>
   <div id="app">
-    <custom-map @inputInfo="updateInfo" @displayInfo="updateDisplayInfo" :infoUpdate="showInfo"/>
-    <info-resto :info="childData" :displayInfo="showInfo" @hideInfo="updateDisplayInfo"> </info-resto>
-    <informations></informations>
+    <custom-map
+      @inputInfo="updateInfo"
+      @displayInfo="updateDisplayInfo"
+      :infoUpdate="showInfo"
+      :getNewCenter="center"
+      @sendNewCenter="haveNewCenter"
+    />
+    <info-resto
+      :info="childData"
+      :displayInfo="showInfo"
+      @hideInfo="updateDisplayInfo"
+    >
+    </info-resto>
+    <informations @centerUpdate="updateCenter" :newCenter="newCenter"></informations>
   </div>
 </template>
 
@@ -16,13 +27,15 @@ export default {
   components: {
     CustomMap,
     Informations,
-    InfoResto
+    InfoResto,
   },
   data() {
     return {
       childData: 0,
       showInfo: null,
-    }
+      center: null, //boolean to display the list Informations
+      newCenter: {} //for the list Informations
+    };
   },
   methods: {
     updateInfo(variable) {
@@ -30,8 +43,14 @@ export default {
     },
     updateDisplayInfo(variable) {
       this.showInfo = variable;
+    },
+    updateCenter(variable) {
+      this.center = variable;
+    },
+    haveNewCenter(variable) {
+      this.newCenter = variable
     }
-  }
+  },
 };
 </script>
 

@@ -66,6 +66,9 @@ export default {
     },
     infoUpdate: {
       type: Boolean
+    },
+    getNewCenter: {
+      type: Boolean
     }
   },
   data() {
@@ -97,7 +100,6 @@ export default {
     },
     centerUpdated(center) {
       this.center = center;
-      console.log(this.center)
     },
     async getUserPosition() {
       //for the userMarker
@@ -124,6 +126,11 @@ export default {
   watch: {
     infoUpdate() {
       this.showInfo = this.infoUpdate
+    },
+    getNewCenter() {
+      if (this.getNewCenter) {
+        this.$emit("sendNewCenter", this.center)
+      }
     }
   }
 };

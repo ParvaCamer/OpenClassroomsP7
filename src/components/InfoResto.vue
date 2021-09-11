@@ -60,7 +60,7 @@ export default {
         this.restos.forEach(function (oneResto) {
           oneResto.infoComment = [];
           oneResto.ratings.forEach(function (infos) {
-            oneResto.infoComment.push("~ " + infos.name + " : "+ " mon avis : " + infos.stars + " \u2605 ~");
+            oneResto.infoComment.push("▸ " + infos.name + " : "+ " mon avis : " + infos.stars + " \u2605");
             oneResto.infoComment.push("Commentaire : " + infos.comment)
           });
         });
