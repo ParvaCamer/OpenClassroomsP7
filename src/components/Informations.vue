@@ -26,13 +26,13 @@
       <div class="restoColour">
       <h2><u>Restaurants </u>:</h2>
       <div class="close-container" >
-        <div class="leftright" v-on:click="show = false"></div>
-        <div class="rightleft" v-on:click="show = false"></div>
+        <div class="leftright" v-on:click="showList"></div>
+        <div class="rightleft" v-on:click="showList"></div>
         <label class="close">fermer</label>
       </div>
       </div>
       <div class="listColour">
-      <div v-for="resto in restos" :key="resto.id">
+      <div v-for="resto in restos" :key="resto.id" >
         {{ resto.restaurantName }} : {{ resto.restoStar }}★
       </div>
       </div>
@@ -64,6 +64,7 @@ export default {
         this.restos = res.data;
 
         this.restos.forEach(function (oneResto) {
+          //to get the average stars
           let currentTotal = 0;
           let allRatings = 0;
           oneResto.ratings.forEach(function (stars) {
@@ -71,13 +72,18 @@ export default {
             allRatings += 1;
           });
           oneResto.restoStar = currentTotal / allRatings;
+
+          //to get the lat-lng to display on the list
+          oneResto.infoList = []
+          oneResto.infoList.push(oneResto.lat, oneResto.long)
+          console.log(oneResto.infoList)
         });
       })
       .catch((error) => console.log(error));
   },
   methods: {
     showList() {
-      this.show = true
+      this.show = !this.show
       this.$emit("centerUpdate", this.show)
     }
   },
@@ -85,7 +91,7 @@ export default {
     newCenter() {
       console.log(this.newCenter)
       this.center.push(this.newCenter.lat, this.newCenter.lng)
-      console.log(this.center, "longueur : ", this.center.length)
+      console.log(this.center, "longueur : ", this.center.length, this.center[0]-0.0016)
     }
   }
 };
