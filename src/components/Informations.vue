@@ -1,7 +1,7 @@
 <template>
-  <div class="information">
+  <div class="information" v-show="loadData === true">
     <div class="button1" v-show="!show">
-      <a class="abutton1" href="javascript:;" v-on:click="showList">
+      <a class="abutton1" v-on:click="showList">
         <svg class="icon-arrow before">
           <use xlink:href="#arrow"></use>
         </svg>
@@ -24,17 +24,26 @@
     </div>
     <div class="rectangle" v-show="show">
       <div class="restoColour">
-      <h2><u>Restaurants </u>:</h2>
-      <div class="close-container" >
-        <div class="leftright" v-on:click="showList"></div>
-        <div class="rightleft" v-on:click="showList"></div>
-        <label class="close">fermer</label>
-      </div>
+        <h2><u>Restaurants </u>:</h2>
+        <div class="close-container">
+          <div class="leftright" v-on:click="showList"></div>
+          <div class="rightleft" v-on:click="showList"></div>
+        </div>
       </div>
       <div class="listColour">
-      <div v-for="resto in restos" :key="resto.id" >
-        {{ resto.restaurantName }} : {{ resto.restoStar }}★
-      </div>
+        <div
+          class="itemList"
+          v-for="resto in restos"
+          :key="resto.id"
+          v-show="
+            resto.lat <= center[0] + 0.00629 &&
+            resto.lat >= center[0] - 0.00629 &&
+            resto.long <= center[1] + 0.0202 &&
+            resto.long >= center[1] - 0.0202
+          "
+        >
+          {{ resto.restaurantName }} : {{ resto.restoStar }}★
+        </div>
       </div>
     </div>
   </div>
@@ -49,51 +58,76 @@ export default {
     return {
       restos: [],
       show: false,
-      center: []
+      center: [],
+      star: 0, //rating star
+      loadData: true,
     };
   },
   props: {
     newCenter: {
-      type: Object
-    }
+      type: Object,
+    },
+    newStar: {
+      type: String,
+    },
+    info: {
+      type: Number,
+    },
+    propsMarker: {
+      type: Object,
+    },
   },
   mounted() {
-    axios
-      .get("http://localhost:3000/restos")
-      .then((res) => {
-        this.restos = res.data;
+    if (this.loadData) {
+      axios
+        .get("http://localhost:3000/restos")
+        .then((res) => {
+          this.restos = res.data;
 
-        this.restos.forEach(function (oneResto) {
-          //to get the average stars
-          let currentTotal = 0;
-          let allRatings = 0;
-          oneResto.ratings.forEach(function (stars) {
-            currentTotal += stars.stars;
-            allRatings += 1;
+          this.restos.forEach(function (oneResto) {
+            //to get the average stars
+            let currentTotal = 0;
+            let allRatings = 0;
+            oneResto.ratings.forEach(function (stars) {
+              currentTotal += stars.stars;
+              allRatings += 1;
+            });
+            oneResto.restoStar = currentTotal / allRatings;
+
+            //to get the lat-lng to display on the list
+            oneResto.infoList = [];
+            oneResto.infoList.push(oneResto.lat, oneResto.long);
           });
-          oneResto.restoStar = currentTotal / allRatings;
-
-          //to get the lat-lng to display on the list
-          oneResto.infoList = []
-          oneResto.infoList.push(oneResto.lat, oneResto.long)
-          console.log(oneResto.infoList)
-        });
-      })
-      .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error));
+    }
   },
   methods: {
-    showList() {
-      this.show = !this.show
-      this.$emit("centerUpdate", this.show)
-    }
+    showList() { //hide or show the window
+      this.show = !this.show;
+    },
   },
   watch: {
-    newCenter() {
-      console.log(this.newCenter)
-      this.center.push(this.newCenter.lat, this.newCenter.lng)
-      console.log(this.center, "longueur : ", this.center.length, this.center[0]-0.0016)
-    }
-  }
+    newCenter() { //can refresh the list everytime we move
+      this.center = [];
+      this.center.push(this.newCenter.lat, this.newCenter.lng);
+    },
+    newStar() { //refresh the resto's star
+      this.showList();
+      this.loadData = false;
+      let numberStar = parseInt(this.newStar);
+      this.star = numberStar;
+      this.restos[this.info].restoStar = (this.restos[this.info].restoStar + this.star) / 2;
+      this.restos[this.info].restoStar = this.restos[this.info].restoStar.toFixed(2);
+      this.loadData = true;
+      this.showList();
+    },
+    propsMarker() { //reload data to show the new marker
+      this.loadData = false;
+      this.restos.push(this.propsMarker);
+      this.loadData = true;
+    },
+  },
 };
 </script>
 
@@ -101,19 +135,29 @@ export default {
 .rectangle {
   position: absolute;
   z-index: 2;
-  background-color: rgb(58, 155, 58);
-  height: 90%;
+  background-color: #79b4b7;
+  height: 71%;
   border-top: 5px double black;
   border-left: 5px double black;
   left: 5%;
-  top: 3%;
-  padding-left: 5px;
+  top: 10%;
+  padding-left: 15px;
   width: 13%;
   border-radius: 30px 0px 30px 0px;
+  box-shadow: 6px -9px 0.5em rgba(131, 131, 131, 0.856);
 }
 .listColour {
-  background-color: honeydew;
-  border: 1px black;
+  background-color: #fefbf3;
+  border: 2px solid black;
+  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  width: 88%;
+  height: 84%;
+  border-radius: 30px 0px 30px 0px;
+}
+.itemList {
+  margin-top: 6%;
 }
 h2 {
   font-family: Trebuchet MS;
@@ -188,19 +232,19 @@ a.abutton1:hover .icon-arrow.after {
 }
 
 a.abutton1:active {
-  border-color: #ac0000;
-  color: #ac0000;
+  border-color: #79b4b7;
+  color: #79b4b7;
 }
 
 a.abutton1:active .icon-arrow {
-  fill: #ac0000;
+  fill: #79b4b7;
 }
 
 /* bouton fermer */
 .close-container {
   position: relative;
   margin: auto;
-  margin-left: 75%;
+  margin-left: 85%;
   cursor: pointer;
 }
 
@@ -208,30 +252,22 @@ a.abutton1:active .icon-arrow {
   height: 4px;
   width: 25px;
   position: absolute;
-  background-color: #f4a259;
+  background-color: #9d9d9d;
   border-radius: 2px;
   transform: rotate(45deg);
   transition: all 0.3s ease-in;
+  margin-top: -90%;
 }
 
 .rightleft {
   height: 4px;
   width: 25px;
   position: absolute;
-  background-color: #f4a259;
+  background-color: #9d9d9d;
   border-radius: 2px;
   transform: rotate(-45deg);
   transition: all 0.3s ease-in;
-}
-
-label {
-  color: white;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all 0.3s ease-in;
-  opacity: 0;
+  margin-top: -90%;
 }
 .close {
   margin: 60px 0 0 5px;

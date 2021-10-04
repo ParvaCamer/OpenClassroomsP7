@@ -1,6 +1,7 @@
 <template>
   <div>
     <l-map
+      v-show="loadData == true"
       :center="[
         userLocation.lat || defaultLocation.lat,
         userLocation.lng || defaultLocation.lng,
@@ -10,6 +11,7 @@
       ref="map"
       @update:zoom="zoomUpdated"
       @update:center="centerUpdated"
+      @click="addMarker"
     >
       <l-tile-layer :url="url"> </l-tile-layer>
       <l-marker
@@ -28,7 +30,6 @@
       >
       </l-marker>
     </l-map>
-
   </div>
 </template>
 
@@ -38,8 +39,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Icon } from "leaflet";
 import axios from "axios";
-import InfoResto from './InfoResto.vue';
-
 
 delete Icon.Default.prototype._getIconUrl;
 Icon.Default.mergeOptions({
@@ -54,7 +53,6 @@ export default {
     LMarker,
     LPopup,
     LIcon,
-    InfoResto
   },
   props: {
     defaultLocation: {
@@ -62,13 +60,25 @@ export default {
       default: () => ({
         lat: 0,
         lng: 0,
-      })
+      }),
     },
     infoUpdate: {
-      type: Boolean
+      type: Boolean,
     },
-    getNewCenter: {
-      type: Boolean
+    pick: {
+      type: Boolean,
+    },
+    markerID: {
+      type: Number,
+    },
+    markerName: {
+      type: String,
+    },
+    markerAddress: {
+      type: String,
+    },
+    markerRatings: {
+      type: Array
     }
   },
   data() {
@@ -76,6 +86,7 @@ export default {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       zoom: 16,
       userLocation: {},
+      loadData: true,
       restos: [],
       icon: L.icon({
         iconUrl: require("../assets/restoPNG.png"),
@@ -83,15 +94,26 @@ export default {
         iconAnchor: [5, 5],
       }),
       showInfo: false,
-      index: 0
+      canClickToAddMarker: false,
+      index: 0,
+      newMarker: {
+        id: 0,
+        restaurantName: "",
+        address: "",
+        lat: 0,
+        long: 0,
+        ratings: [],
+      },
     };
   },
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
-        axios
-      .get("http://localhost:3000/restos").then((res) => {
-        this.restos = res.data;})
+    if (this.loadData) {
+      axios.get("http://localhost:3000/restos").then((res) => {
+        this.restos = res.data;
+      });
+    }
   },
 
   methods: {
@@ -100,9 +122,9 @@ export default {
     },
     centerUpdated(center) {
       this.center = center;
+      this.$emit("sendNewCenter", this.center);
     },
-    async getUserPosition() {
-      //for the userMarker
+    async getUserPosition() {//for the userMarker
       // check if API is supported
       if (navigator.geolocation) {
         // get  geolocation
@@ -115,24 +137,37 @@ export default {
         });
       }
     },
-    sendInfos(index) {
+    sendInfos(index) { //send markers' id
       this.showInfo = true;
-      this.index = index
-      this.$emit("inputInfo", this.index)
-      this.$emit("displayInfo", this.showInfo)
+      this.index = index;
+      this.$emit("inputInfo", this.index);
+      this.$emit("displayInfo", this.showInfo);
+    },
+    addMarker(event) {
+      if (this.canClickToAddMarker) {
+        this.newMarker.id = this.restos.length + this.markerID;
+        this.newMarker.restaurantName = this.markerName;
+        this.newMarker.address = this.markerAddress;
+        this.newMarker.lat = event.latlng.lat;
+        this.newMarker.long = event.latlng.lng;
+        this.newMarker.ratings = event.markerRatings
+        this.loadData = false;
+        this.restos.push(this.newMarker);
+        this.loadData = true;
+        this.canClickToAddMarker = false;
+        this.$emit("moreMarker", this.newMarker);
+      }
     },
   },
-  
+
   watch: {
     infoUpdate() {
-      this.showInfo = this.infoUpdate
+      this.showInfo = this.infoUpdate;
     },
-    getNewCenter() {
-      if (this.getNewCenter) {
-        this.$emit("sendNewCenter", this.center)
-      }
-    }
-  }
+    pick() {
+      this.canClickToAddMarker = this.pick;
+    },
+  },
 };
 </script>
 <style scoped>
