@@ -109,11 +109,9 @@ export default {
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
-    if (this.loadData) {
       axios.get("http://localhost:3000/restos").then((res) => {
         this.restos = res.data;
       });
-    }
   },
 
   methods: {
@@ -123,6 +121,9 @@ export default {
     centerUpdated(center) {
       this.center = center;
       this.$emit("sendNewCenter", this.center);
+      console.log(this.pick, "pick")
+      console.log(this.canClickToAddMarker, "click again")
+      console.log(this.markerID)
     },
     async getUserPosition() {//for the userMarker
       // check if API is supported
@@ -144,16 +145,14 @@ export default {
       this.$emit("displayInfo", this.showInfo);
     },
     addMarker(event) {
-      if (this.canClickToAddMarker) {
+      if (this.pick) {
         this.newMarker.id = this.restos.length + this.markerID;
         this.newMarker.restaurantName = this.markerName;
         this.newMarker.address = this.markerAddress;
         this.newMarker.lat = event.latlng.lat;
         this.newMarker.long = event.latlng.lng;
-        this.newMarker.ratings = event.markerRatings
-        this.loadData = false;
+        this.newMarker.ratings = this.markerRatings;
         this.restos.push(this.newMarker);
-        this.loadData = true;
         this.canClickToAddMarker = false;
         this.$emit("moreMarker", this.newMarker);
       }
@@ -177,5 +176,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  left:0px;
+  top:0px;
 }
 </style>

@@ -19,21 +19,22 @@
       @hideInfo="updateDisplayInfo"
       @changeStarResto="updateStar"
       :propsMarker="markerObject"
-    >
-    </info-resto>
+      @pick="toAddMarker"
+    />
     <informations
       :newCenter="newCenter"
       :newStar="newStar"
       :info="childData"
       :propsMarker="markerObject"
-    ></informations>
+    />
     <addResto
       @pick="toAddMarker"
       @addMarkerID="toAddMarkerID"
       @addMarkerName="toAddMarkerName"
       @addMarkerAddress="toAddMarkerAddress"
       @addMarkerRatings="toAddMarkerRatings"
-    ></addResto>
+    />
+    <showFilter />
   </div>
 </template>
 
@@ -42,6 +43,7 @@ import CustomMap from "@/components/CustomMap.vue";
 import Informations from "@/components/Informations.vue";
 import InfoResto from "@/components/InfoResto.vue";
 import addResto from "@/components/addResto.vue";
+import showFilter from "@/components/Filter.vue";
 
 export default {
   name: "App",
@@ -50,6 +52,7 @@ export default {
     Informations,
     InfoResto,
     addResto,
+    showFilter
   },
   data() {
     return {
@@ -99,7 +102,7 @@ export default {
     },
     ObjectMarker(v) {
       this.markerObject = v;
-    },
+    }
   },
 };
 </script>

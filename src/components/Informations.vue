@@ -36,10 +36,10 @@
           v-for="resto in restos"
           :key="resto.id"
           v-show="
-            resto.lat <= center[0] + 0.00629 &&
-            resto.lat >= center[0] - 0.00629 &&
-            resto.long <= center[1] + 0.0202 &&
-            resto.long >= center[1] - 0.0202
+            resto.lat <= center[0] + 0.0063 &&
+            resto.lat >= center[0] - 0.0063 &&
+            resto.long <= center[1] + 0.02051 &&
+            resto.long >= center[1] - 0.02051
           "
         >
           {{ resto.restaurantName }} : {{ resto.restoStar }}★
@@ -59,7 +59,7 @@ export default {
       restos: [],
       show: false,
       center: [],
-      star: 0, //rating star
+      star: 0,
       loadData: true,
     };
   },
@@ -78,7 +78,6 @@ export default {
     },
   },
   mounted() {
-    if (this.loadData) {
       axios
         .get("http://localhost:3000/restos")
         .then((res) => {
@@ -100,11 +99,12 @@ export default {
           });
         })
         .catch((error) => console.log(error));
-    }
   },
   methods: {
     showList() { //hide or show the window
       this.show = !this.show;
+            console.log(this.star)
+
     },
   },
   watch: {
@@ -113,19 +113,30 @@ export default {
       this.center.push(this.newCenter.lat, this.newCenter.lng);
     },
     newStar() { //refresh the resto's star
-      this.showList();
       this.loadData = false;
       let numberStar = parseInt(this.newStar);
-      this.star = numberStar;
-      this.restos[this.info].restoStar = (this.restos[this.info].restoStar + this.star) / 2;
-      this.restos[this.info].restoStar = this.restos[this.info].restoStar.toFixed(2);
+      this.star = numberStar
+      if (this.restos[this.info].restoStar === 0) {
+        this.restos[this.info].restoStar = this.restos[this.info].restoStar + this.star;
+      } else {
+        this.restos[this.info].restoStar = (this.restos[this.info].restoStar + this.star) / 2;
+      }
+      this.restos[this.info].restoStar = this.restos[this.info].restoStar.toFixed(2).replace(/0+$/, "");
       this.loadData = true;
-      this.showList();
+      console.log(this.star)
+      this.star = 0;
     },
-    propsMarker() { //reload data to show the new marker
-      this.loadData = false;
+    propsMarker() { //add the new marker's star
       this.restos.push(this.propsMarker);
-      this.loadData = true;
+      this.restos.forEach(function (oneResto) {
+        let currentTotal = 0;
+        let allRatings = 0;
+        oneResto.ratings.forEach(function (stars) {
+          currentTotal += stars.stars;
+          allRatings += 1;
+        });
+        oneResto.restoStar = currentTotal / allRatings;
+      })
     },
   },
 };
@@ -136,11 +147,11 @@ export default {
   position: absolute;
   z-index: 2;
   background-color: #79b4b7;
-  height: 71%;
+  height: 72.8%;
   border-top: 5px double black;
   border-left: 5px double black;
   left: 5%;
-  top: 10%;
+  top: 12%;
   padding-left: 15px;
   width: 13%;
   border-radius: 30px 0px 30px 0px;

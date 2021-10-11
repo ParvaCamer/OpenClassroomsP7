@@ -1,6 +1,6 @@
 <template>
-  <div class="infos" v-show="showInfo && loadData === true">
-    <div v-for="comment in restoID" :key="comment">
+  <div class="infos" v-show="showInfo">
+    <div class="windowInfos" v-for="comment in restoID" :key="comment">
       <ul
          v-for="(resto, index) in restos"
         :key="index"
@@ -65,7 +65,7 @@ export default {
     },
     propsMarker: {
       type: Object,
-    },
+    }
   },
   data() {
     return {
@@ -75,12 +75,9 @@ export default {
       message: "",
       selected: "",
       username: "",
-      toShow: [],
-      loadData: true,
     };
   },
   mounted() {
-    if (this.loadData) {
       axios
         .get("http://localhost:3000/restos")
         .then((res) => {
@@ -95,7 +92,6 @@ export default {
           });
         })
         .catch((error) => console.log(error));
-    }
   },
   watch: {
     info() {//to have the id of the marker
@@ -107,9 +103,16 @@ export default {
       this.showInfo = watchInfo;
     },
     propsMarker() {//reload data and add the marker data into the array
-      this.loadData = false;
       this.restos.push(this.propsMarker);
-      this.loadData = true;
+      this.restos.forEach(function (oneResto) {
+            oneResto.infoComment = [];
+            oneResto.ratings.forEach(function (infos) {
+              oneResto.infoComment.push( "▸ " + infos.name + " - " + " mon avis : " + infos.stars + " \u2605" );
+              oneResto.infoComment.push("Commentaire : " + infos.comment);
+            });
+          });
+      let pick = null
+      this.$emit("pick", pick)
     },
   },
   methods: {
@@ -118,17 +121,20 @@ export default {
       this.$emit("hideInfo", this.showInfo);
     },
     addData() {//to add a new rating -- refresh the resto's stars
-      this.loadData = false;
+      if ( this.restos[this.info].infoComment[1] === "Commentaire : Pas de commentaire disponible." ) {
+        for (let i=0; i < 2; i++) {
+          this.restos[this.info].infoComment.shift()
+        }
+      }
       this.restos[this.info].infoComment.push("▸ " + this.username + " - " + " mon avis : " + this.selected + " \u2605");
       this.restos[this.info].infoComment.push("Commentaire : " + this.message);
-      this.loadData = true;
       this.message = "";
       this.username = "";
-      this.selected = "";
       //to change the resto star from the list. it works, dont touch
       var a = document.getElementById("mySelect").selectedIndex;
       var b = document.getElementsByTagName("option")[a].value;
-      this.$emit("changeStarResto", b);
+      this.$emit("changeStarResto", b);      
+      this.selected = "";
     },
   },
 };

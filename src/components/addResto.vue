@@ -7,11 +7,11 @@
       <h2>Ajout d'un restaurant</h2>
       <div class="forInput">
         <input class="inputName" v-model="name" />
-        <label>Nom du restaurant</label>
+        <label>Nom du restaurant :</label>
       </div>
       <div class="forInput">
         <input class="inputAddress" v-model="address" />
-        <label>Adresse du restaurant</label>
+        <label>Adresse du restaurant :</label>
       </div>
       <button
         class="btnMarker"
@@ -34,10 +34,10 @@ export default {
       id: 0,
       name: "",
       address: "",
-      ratings:[{
-        stars:0,
-        comment:"oui",
-        name:"michel"
+      ratings: [{
+        stars: 0,
+        comment: "Pas de commentaire disponible.",
+        name: "Exemple Davis"
       }]
     };
   },
@@ -45,16 +45,21 @@ export default {
     showWindow() {
       this.window = !this.window;
     },
+    updateData() {
+      this.pick = !this.pick;
+      this.id += 1;
+    },
     pickASpot() {
-      this.showWindow();
-      this.pick = true; //can click on the map to add marker
+      this.showWindow(); //close the window to click on the map
+      this.updateData() //can click on the map to add marker
       this.$emit("pick", this.pick);
-      this.$emit("addMarkerID", this.id + 1);
+      this.$emit("addMarkerID", this.id);
       this.$emit("addMarkerName", this.name);
       this.$emit("addMarkerAddress", this.address);
       this.$emit("addMarkerRatings", this.ratings);
       this.name = "";
       this.address = "";
+      this.pick = false;
     },
   },
 };
@@ -70,7 +75,7 @@ export default {
   height: 35%;
   border: 1px solid black;
   left: 39%;
-  top: 29%;
+  top: 25%;
   right: 30%;
   padding:50px 50px;
   border-radius: 2%;
@@ -83,7 +88,7 @@ export default {
 }
 .forInput label{
 	position:absolute;
-	top:0px;
+	top:-12px;
 	left:0px;
 	font-size:16px;
 	color:rgb(0, 0, 0);	
@@ -106,6 +111,16 @@ export default {
 h2 {
   text-align: center;
 }
+.btnMarker {
+  position: absolute;
+  bottom: 20%;
+  left:20%;
+}
+.btnClose {
+  position: absolute;
+  bottom: 20%;
+  right:20%;
+}
 /* bouton restaurant */
 .btnResto {
   position: relative;
@@ -115,7 +130,7 @@ h2 {
   margin: 0 15px;
   perspective: 1000px;
   z-index: 2;
-  top: 830px;
+  top: 845px;
   left: 45%;
 }
 .btnResto a {
