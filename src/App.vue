@@ -12,6 +12,9 @@
       :markerAddress="pickMarkerAddress"
       :markerRatings="pickMarkerRatings"
       @moreMarker="ObjectMarker"
+      :receiveValueFilter="getValueFilter"
+      :receiveArrayStar="getArrayStar"
+      @deleteMarker="valueDelete"
     />
     <info-resto
       :info="childData"
@@ -26,6 +29,8 @@
       :newStar="newStar"
       :info="childData"
       :propsMarker="markerObject"
+      @sendArrayStar="getValueStar"
+      :dataMarker="getValueMarker"
     />
     <addResto
       @pick="toAddMarker"
@@ -34,7 +39,9 @@
       @addMarkerAddress="toAddMarkerAddress"
       @addMarkerRatings="toAddMarkerRatings"
     />
-    <showFilter />
+    <showFilter 
+      @sendValueFilter="getValue"
+    />
   </div>
 </template>
 
@@ -67,6 +74,9 @@ export default {
       pickMarkerAddress: "",
       pickMarkerRatings: [],
       markerObject: {},
+      getValueFilter: 0,
+      getArrayStar: [],
+      getValueMarker: []
     };
   },
   methods: {
@@ -102,6 +112,15 @@ export default {
     },
     ObjectMarker(v) {
       this.markerObject = v;
+    },
+    getValue(value) {
+      this.getValueFilter = value
+    },
+    getValueStar(value) {
+      this.getArrayStar = value
+    },
+    valueDelete(v) {
+      this.getValueMarker = v
     }
   },
 };

@@ -1,5 +1,4 @@
 <template>
-  <div>
     <l-map
       v-show="loadData == true"
       :center="[
@@ -21,16 +20,19 @@
         ]"
       >
       </l-marker>
-      <l-marker
+      <span
         v-for="(resto, index) in restos"
         :key="index"
-        :lat-lng="[resto.lat, resto.long]"
-        :icon="icon"
-        v-on:click="sendInfos(index)"
-      >
-      </l-marker>
+        >
+        <l-marker 
+          v-if="(restosToShow.includes(index) && restosToShow.length > 0) || restosToShow.length === 0 "
+          :lat-lng="[resto.lat, resto.long]"
+          :icon="icon"
+          v-on:click="sendInfos(index)"
+        >
+        </l-marker>
+      </span>
     </l-map>
-  </div>
 </template>
 
 <script>
@@ -62,24 +64,14 @@ export default {
         lng: 0,
       }),
     },
-    infoUpdate: {
-      type: Boolean,
-    },
-    pick: {
-      type: Boolean,
-    },
-    markerID: {
-      type: Number,
-    },
-    markerName: {
-      type: String,
-    },
-    markerAddress: {
-      type: String,
-    },
-    markerRatings: {
-      type: Array
-    }
+    infoUpdate: Boolean,
+    pick: Boolean,
+    markerID: Number,
+    markerName: String,
+    markerAddress: String,
+    markerRatings: Array,
+    receiveArrayStar: Array,
+    receiveValueFilter: Number
   },
   data() {
     return {
@@ -94,16 +86,8 @@ export default {
         iconAnchor: [5, 5],
       }),
       showInfo: false,
-      canClickToAddMarker: false,
       index: 0,
-      newMarker: {
-        id: 0,
-        restaurantName: "",
-        address: "",
-        lat: 0,
-        long: 0,
-        ratings: [],
-      },
+      restosToShow: []
     };
   },
 
@@ -121,9 +105,6 @@ export default {
     centerUpdated(center) {
       this.center = center;
       this.$emit("sendNewCenter", this.center);
-      console.log(this.pick, "pick")
-      console.log(this.canClickToAddMarker, "click again")
-      console.log(this.markerID)
     },
     async getUserPosition() {//for the userMarker
       // check if API is supported
@@ -144,17 +125,24 @@ export default {
       this.$emit("inputInfo", this.index);
       this.$emit("displayInfo", this.showInfo);
     },
-    addMarker(event) {
+    addMarker(event) { //add a new marker when we click on the "add" button
       if (this.pick) {
-        this.newMarker.id = this.restos.length + this.markerID;
-        this.newMarker.restaurantName = this.markerName;
-        this.newMarker.address = this.markerAddress;
-        this.newMarker.lat = event.latlng.lat;
-        this.newMarker.long = event.latlng.lng;
-        this.newMarker.ratings = this.markerRatings;
-        this.restos.push(this.newMarker);
-        this.canClickToAddMarker = false;
-        this.$emit("moreMarker", this.newMarker);
+        let newMarker = {
+          id: 0,
+          restaurantName: "",
+          address: "",
+          lat: 0,
+          long: 0,
+          ratings: [],
+        }
+        newMarker.id = this.restos.length + this.markerID;
+        newMarker.restaurantName = this.markerName;
+        newMarker.address = this.markerAddress;
+        newMarker.lat = event.latlng.lat;
+        newMarker.long = event.latlng.lng;
+        newMarker.ratings = this.markerRatings;
+        this.restos.push(newMarker);
+        this.$emit("moreMarker", newMarker);
       }
     },
   },
@@ -163,9 +151,20 @@ export default {
     infoUpdate() {
       this.showInfo = this.infoUpdate;
     },
-    pick() {
-      this.canClickToAddMarker = this.pick;
+    receiveArrayStar() {
+      for (let i = 0; i < this.receiveArrayStar.length; i++) {
+        this.receiveArrayStar[i] = Math.round(this.receiveArrayStar[i] * 100)
+      }
     },
+    receiveValueFilter(elem) {
+      this.restosToShow = [];
+        for (let i = 0; i < 49; i++) {
+          if (this.receiveArrayStar[i] >= elem && this.receiveArrayStar[i] < elem + 50 ) {
+            this.restosToShow.push(i)
+          }
+        }
+      this.$emit("deleteMarker", this.restosToShow)
+    }
   },
 };
 </script>

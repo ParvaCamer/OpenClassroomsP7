@@ -33,8 +33,8 @@
       <div class="listColour">
         <div
           class="itemList"
-          v-for="resto in restos"
-          :key="resto.id"
+          v-for="(resto, index) in restos"
+          :key="index"
           v-show="
             resto.lat <= center[0] + 0.0063 &&
             resto.lat >= center[0] - 0.0063 &&
@@ -42,7 +42,9 @@
             resto.long >= center[1] - 0.02051
           "
         >
-          {{ resto.restaurantName }} : {{ resto.restoStar }}★
+          <span v-if="(dataMarker.includes(index) && dataMarker.length > 0) || dataMarker.length === 0">
+            {{ resto.restaurantName }} : {{ resto.restoStar }}★
+          </span>
         </div>
       </div>
     </div>
@@ -59,52 +61,49 @@ export default {
       restos: [],
       show: false,
       center: [],
-      star: 0,
       loadData: true,
     };
   },
   props: {
-    newCenter: {
-      type: Object,
-    },
-    newStar: {
-      type: String,
-    },
-    info: {
-      type: Number,
-    },
-    propsMarker: {
-      type: Object,
-    },
+    newCenter: Object,
+    newStar: String,
+    info: Number,
+    propsMarker: Object,
+    dataMarker: Array
   },
   mounted() {
       axios
         .get("http://localhost:3000/restos")
         .then((res) => {
           this.restos = res.data;
+          let arrayStar = [];
 
           this.restos.forEach(function (oneResto) {
             //to get the average stars
             let currentTotal = 0;
             let allRatings = 0;
+            oneResto.allStarAdded = []
             oneResto.ratings.forEach(function (stars) {
               currentTotal += stars.stars;
               allRatings += 1;
+              oneResto.allStarAdded.push(stars.stars)
             });
             oneResto.restoStar = currentTotal / allRatings;
 
             //to get the lat-lng to display on the list
             oneResto.infoList = [];
             oneResto.infoList.push(oneResto.lat, oneResto.long);
-          });
+
+            arrayStar.push(oneResto.restoStar)
+            
+          }); 
+          this.$emit("sendArrayStar", arrayStar)
         })
         .catch((error) => console.log(error));
   },
   methods: {
     showList() { //hide or show the window
       this.show = !this.show;
-            console.log(this.star)
-
     },
   },
   watch: {
@@ -115,29 +114,36 @@ export default {
     newStar() { //refresh the resto's star
       this.loadData = false;
       let numberStar = parseInt(this.newStar);
-      this.star = numberStar
       if (this.restos[this.info].restoStar === 0) {
-        this.restos[this.info].restoStar = this.restos[this.info].restoStar + this.star;
+        this.restos[this.info].restoStar = numberStar;
+        this.restos[this.info].allStarAdded.splice(0, 1)
+        this.restos[this.info].allStarAdded.push(numberStar);
       } else {
-        this.restos[this.info].restoStar = (this.restos[this.info].restoStar + this.star) / 2;
+        let total = 0;
+        this.restos[this.info].allStarAdded.push(numberStar);
+
+        for (let i = 0; i < this.restos[this.info].allStarAdded.length; i++) {
+          total += Number(this.restos[this.info].allStarAdded[i])
+        }
+        this.restos[this.info].restoStar = total / this.restos[this.info].allStarAdded.length;
       }
-      this.restos[this.info].restoStar = this.restos[this.info].restoStar.toFixed(2).replace(/0+$/, "");
+      this.restos[this.info].restoStar = this.restos[this.info].restoStar.toFixed(2);
       this.loadData = true;
-      console.log(this.star)
-      this.star = 0;
     },
     propsMarker() { //add the new marker's star
       this.restos.push(this.propsMarker);
       this.restos.forEach(function (oneResto) {
         let currentTotal = 0;
         let allRatings = 0;
+        oneResto.allStarAdded = [];
         oneResto.ratings.forEach(function (stars) {
           currentTotal += stars.stars;
           allRatings += 1;
+          oneResto.allStarAdded.push(stars.stars)
         });
         oneResto.restoStar = currentTotal / allRatings;
-      })
-    },
+      }) 
+    }
   },
 };
 </script>

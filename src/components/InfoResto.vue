@@ -57,15 +57,9 @@ import axios from "axios";
 export default {
   name: "InfoResto",
   props: {
-    info: {
-      type: Number,
-    },
-    displayInfo: {
-      type: Boolean,
-    },
-    propsMarker: {
-      type: Object,
-    }
+    info: Number,
+    displayInfo: Boolean,
+    propsMarker: Object,
   },
   data() {
     return {
@@ -135,6 +129,7 @@ export default {
       var b = document.getElementsByTagName("option")[a].value;
       this.$emit("changeStarResto", b);      
       this.selected = "";
+      console.log(this.restos)
     },
   },
 };
