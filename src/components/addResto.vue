@@ -130,8 +130,8 @@ h2 {
   margin: 0 15px;
   perspective: 1000px;
   z-index: 2;
-  top: 845px;
-  left: 45%;
+  top: 830px;
+  left: 700px;
 }
 .btnResto a {
   font-size: 12px;

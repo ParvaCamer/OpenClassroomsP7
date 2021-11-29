@@ -129,7 +129,6 @@ export default {
       var b = document.getElementsByTagName("option")[a].value;
       this.$emit("changeStarResto", b);      
       this.selected = "";
-      console.log(this.restos)
     },
   },
 };

@@ -5,7 +5,7 @@
             "restaurantName": "Viva Italian Pizza",
             "address": "107 Rue Sadi Carnot, 59350 Saint-André-lez-Lille",
             "lat": 50.66145968683213, 
-            "long": 3.0555101347247584, 
+            "long": 3.0555101347247584,
             "ratings": [
                 {
                     "stars": 5,
@@ -965,8 +965,8 @@
             "id":35,
             "restaurantName": "Hall U Need",
             "address": "26 Rue Félix Faure, 59350 Saint-André-lez-Lille",
-            "lat": 50.66885950431086, 
-            "long": 3.0556091333033204, 
+            "lat": 50.66405855010319, 
+            "long": 3.0573645173533786, 
             "ratings": [
                 {
                     "stars": 1,

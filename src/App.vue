@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <custom-map
+    <GoogleMap
       @inputInfo="updateInfo"
       @displayInfo="updateDisplayInfo"
       :infoUpdate="showInfo"
@@ -31,6 +31,8 @@
       :propsMarker="markerObject"
       @sendArrayStar="getValueStar"
       :dataMarker="getValueMarker"
+      @inputInfo="updateInfo"
+      @displayInfo="updateDisplayInfo"
     />
     <addResto
       @pick="toAddMarker"
@@ -46,7 +48,7 @@
 </template>
 
 <script>
-import CustomMap from "@/components/CustomMap.vue";
+import GoogleMap from "@/components/GoogleMap.vue";
 import Informations from "@/components/Informations.vue";
 import InfoResto from "@/components/InfoResto.vue";
 import addResto from "@/components/addResto.vue";
@@ -55,7 +57,7 @@ import showFilter from "@/components/Filter.vue";
 export default {
   name: "App",
   components: {
-    CustomMap,
+    GoogleMap,
     Informations,
     InfoResto,
     addResto,

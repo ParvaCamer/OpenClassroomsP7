@@ -42,7 +42,7 @@
             resto.long >= center[1] - 0.02051
           "
         >
-          <span v-if="(dataMarker.includes(index) && dataMarker.length > 0) || dataMarker.length === 0">
+          <span v-if="(dataMarker.includes(index) && dataMarker.length > 0) || dataMarker.length === 0" @click="sendInfos(index)">
             {{ resto.restaurantName }} : {{ resto.restoStar }}★
           </span>
         </div>
@@ -62,6 +62,8 @@ export default {
       show: false,
       center: [],
       loadData: true,
+      showInfo: false,
+      index: 0,
     };
   },
   props: {
@@ -105,6 +107,13 @@ export default {
     showList() { //hide or show the window
       this.show = !this.show;
     },
+    sendInfos(index) {
+      //send markers' id
+      this.showInfo = true;
+      this.index = index;
+      this.$emit("inputInfo", this.index);
+      this.$emit("displayInfo", this.showInfo);
+    }
   },
   watch: {
     newCenter() { //can refresh the list everytime we move
