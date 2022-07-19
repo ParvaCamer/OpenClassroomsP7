@@ -14,20 +14,9 @@
         />
       </span>
     </GmapMap>
-      <div class="ui">
-        <input type="text" placeholder="Entrer l'adresse" v-model="coordinates" />
-        <a class="round-button" @click="locatorButtonPressed"></a>
-        <select v-model="type">
-          <option value="restaurant">Restaurants</option>
-        </select>
-        <select v-model="radius">
-          <option value="5">5 KM</option>
-          <option value="10">10 KM</option>
-          <option value="15">15 KM</option>
-          <option value="20">20 KM</option>
-        </select>
-        <button class="uiBtn" @click="findRestaurants">Chercher</button>
-      </div>
+    <div class="btnPlaceDetails">
+      <a href="#" @click="findRestaurants"></a>
+    </div>
   </div>
 </template>
 
@@ -60,10 +49,10 @@ export default {
       zoom: 16,
       userPos: {lat: 0, lng: 0},
       options: {
-        clickableIcons: false
+        clickableIcons: false,
       },
       icon : {
-        url: require("../assets/user.png"),
+        url: require("../assets/images/user.png"),
         scaledSize: {width: 32, height: 32},
         labelOrigin: {x: 16, y: -10}
       },
@@ -73,15 +62,13 @@ export default {
       index: 0,
       restosToShow: [],
       address: "",
-
-      type: "",
-      radius: "",
-      places: []
+      places: [],
     };
   },
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
+    alert('Veuillez donner accès à votre position pour une meilleure expérience !') 
     axios.get("http://localhost:3000/restos").then((res) => {
       this.restos = res.data;
     });
@@ -126,7 +113,9 @@ export default {
       this.$emit("displayInfo", this.showInfo);
     },
     addMarker(event) {
-      //add a new marker when we click on the "add" button
+      this.showInfo = false
+      this.$emit("displayInfo", this.showInfo);
+      //add a new marker when we click on the "add restaurant" button
       if (this.pick) {
         let newMarker = {
           id: 0,
@@ -146,30 +135,39 @@ export default {
         this.$emit("moreMarker", newMarker);
       }
     },
-    locatorButtonPressed() {
-      navigator.geolocation.getCurrentPosition(position => {
-        this.userPos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-      },
-      error => {
-        console.log(error);
-        }
-      );
-    },
     findRestaurants() {
-      const URL = `https://maps.googleapis.com/maps/api/place/nearbysearch/json
-      ?location=${this.userPos.lat},${this.userPos.lng}
-      &types=${this.type}
-      &radius=${this.radius *1000}`;
+      let lat = this.userPos.lat
+      let lng = this.userPos.lng
+      const URL = `https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat},${lng}&type=restaurant&radius=1500&key=AIzaSyBicaraRK7wIvEUpXJ0XptenscyvULmMDM`;
       axios.get(URL).then(response => {
         this.places = response.data.results;
-        this.addLocationsToGoogleMaps();
         console.log(this.places)
-      }).catch(error => {
-        console.log(error.message);
-      });
+        this.addPlaces()
+      })
+    },
+    addPlaces() {
+      let restoLength = this.restos.length +1;
+      let restoToSend = [];
+      for (let i = 0; i < this.places.length; i++) {
+        // for (let j = 0; j < this.restos.length; j++) {
+          
+        //   if (this.places[i].name === this.restos[j].restaurantName) {
+        //     this.places.splice(i,1)
+        //   }
+        // }
+        let newPlace = {
+          id: i + restoLength,
+          restaurantName: this.places[i].name,
+          address: this.places[i].vicinity,
+          lat: this.places[i].geometry.location.lat,
+          long: this.places[i].geometry.location.lng,
+          detailsAPI: [],
+          placeID: this.places[i].place_id
+          }
+        this.restos.push(newPlace)
+        restoToSend.push(newPlace)
+      }
+      this.$emit("restoToSend", restoToSend)
     },
   },
 
@@ -185,10 +183,7 @@ export default {
     receiveValueFilter(elem) {
       this.restosToShow = [];
       for (let i = 0; i < 49; i++) {
-        if (
-          this.receiveArrayStar[i] >= elem &&
-          this.receiveArrayStar[i] < elem + 50
-        ) {
+        if (this.receiveArrayStar[i] >= elem && this.receiveArrayStar[i] < elem + 50) {
           this.restosToShow.push(i);
         }
       }
@@ -197,33 +192,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-#map {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  left: 0px;
-  top: 0px;
-}
-#marker{
-  width: 50%;
-}
-.ui {
-  position: relative;
-  z-index: 2;
-}
-.round-button {
-    display:block;
-    width:20px;
-    height:20px;
-    border: 2px solid #f5f5f5;
-    border-radius: 50%;
-    color:#f5f5f5;
-    background: #555777;
-}
-.round-button:hover {
-    background: #777555;
-}
-</style>
+<style src="@/assets/styles/googleMap.css" />

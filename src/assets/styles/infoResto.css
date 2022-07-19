@@ -1,0 +1,83 @@
+#windowInfos {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    height: 55%;
+    border: 1px solid black;
+    left: 37%;
+    top: 20%;
+    right: 32%;
+    overflow-y: scroll;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    border-radius: 2%;
+    box-shadow: -5px -9px 0.5em rgba(131, 131, 131, 0.856);
+  }
+  .imgStreetView {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    padding-bottom: 14px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .ulInfo {
+    left: 50%;
+  }
+  .btnInfo {
+    position: relative;
+    height: 10%;
+    top: 4%;
+  }
+  .btn1 {
+    position: relative;
+    left: 35%;
+  }
+  .btn2 {
+    position: relative;
+    left: 45%;
+  }
+  .btn:hover {
+    color: rgb(63, 60, 60);
+    border-style: groove;
+  }
+  .textarea {
+    position: relative;
+    top: 1%;
+  }
+  .spanAvis {
+    text-decoration: underline;
+    font-size: 17px;
+  }
+  h2 {
+    text-align: center;
+    margin-top: 12px;
+  }
+  #firstInput {
+    position: relative;
+    resize: none;
+    left: 6%;
+    padding: 12px;
+    width: 85% !important;
+    background-color: rgba(240, 240, 240, 0.329);
+    border: 0px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+  }
+  #anotherInput {
+    position: relative;
+    left: 10%;
+    background-color: rgba(240, 240, 240, 0.329);
+    border: 1px solid rgb(190, 190, 190);
+  }
+  .average {
+    position: relative;
+    left: 20%;
+  }
+  .divComment {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 2%;
+    border-radius: 3%;
+  }
+  .h4resto {
+    text-align: center;
+  }

@@ -15,6 +15,7 @@
       :receiveValueFilter="getValueFilter"
       :receiveArrayStar="getArrayStar"
       @deleteMarker="valueDelete"
+      @restoToSend="restoAPI"
     />
     <info-resto
       :info="childData"
@@ -23,6 +24,7 @@
       @changeStarResto="updateStar"
       :propsMarker="markerObject"
       @pick="toAddMarker"
+      :receiveRestoAPI="getRestoAPI"
     />
     <informations
       :newCenter="newCenter"
@@ -33,6 +35,7 @@
       :dataMarker="getValueMarker"
       @inputInfo="updateInfo"
       @displayInfo="updateDisplayInfo"
+      :receiveRestoAPI="getRestoAPI"
     />
     <addResto
       @pick="toAddMarker"
@@ -78,7 +81,8 @@ export default {
       markerObject: {},
       getValueFilter: 0,
       getArrayStar: [],
-      getValueMarker: []
+      getValueMarker: [],
+      getRestoAPI: []
     };
   },
   methods: {
@@ -123,10 +127,10 @@ export default {
     },
     valueDelete(v) {
       this.getValueMarker = v
+    },
+    restoAPI(v) {
+      this.getRestoAPI = v
     }
   },
 };
 </script>
-
-<style>
-</style>

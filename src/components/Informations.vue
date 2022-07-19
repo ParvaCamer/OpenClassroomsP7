@@ -71,7 +71,8 @@ export default {
     newStar: String,
     info: Number,
     propsMarker: Object,
-    dataMarker: Array
+    dataMarker: Array,
+    receiveRestoAPI: Array
   },
   mounted() {
       axios
@@ -96,8 +97,7 @@ export default {
             oneResto.infoList = [];
             oneResto.infoList.push(oneResto.lat, oneResto.long);
 
-            arrayStar.push(oneResto.restoStar)
-            
+            arrayStar.push(oneResto.restoStar)            
           }); 
           this.$emit("sendArrayStar", arrayStar)
         })
@@ -152,163 +152,27 @@ export default {
         });
         oneResto.restoStar = currentTotal / allRatings;
       }) 
+    },
+    receiveRestoAPI() {
+      this.receiveRestoAPI.forEach(function (oneResto) {
+        let currentTotal = 0;
+        let allRatings = 0;
+        oneResto.allStarAdded = [];
+        axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&placeid=${oneResto.placeID}&fields=reviews&key=AIzaSyBicaraRK7wIvEUpXJ0XptenscyvULmMDM`)
+       .then(response => {
+          oneResto.detailsAPI = response.data.result.reviews
+          oneResto.detailsAPI.forEach(function (placeDetails) {
+          currentTotal += placeDetails.rating;
+          allRatings += 1;
+          oneResto.allStarAdded.push(placeDetails.rating)
+        })
+        oneResto.restoStar = (currentTotal / allRatings).toFixed(2);
+       })
+      })
+      this.restos = this.restos.concat(this.receiveRestoAPI)
     }
   },
 };
 </script>
 
-<style scoped>
-.rectangle {
-  position: absolute;
-  z-index: 2;
-  background-color: #79b4b7;
-  height: 72.8%;
-  border-top: 5px double black;
-  border-left: 5px double black;
-  left: 5%;
-  top: 12%;
-  padding-left: 15px;
-  width: 13%;
-  border-radius: 30px 0px 30px 0px;
-  box-shadow: 6px -9px 0.5em rgba(131, 131, 131, 0.856);
-}
-.listColour {
-  background-color: #fefbf3;
-  border: 2px solid black;
-  padding-left: 10px;
-  padding-top: 6px;
-  padding-bottom: 9px;
-  width: 88%;
-  height: 84%;
-  border-radius: 30px 0px 30px 0px;
-}
-.itemList {
-  margin-top: 6%;
-}
-h2 {
-  font-family: Trebuchet MS;
-}
-/* Bouton "Liste restaurants" */
-a.abutton1 {
-  border: 4px solid #3f3f3f;
-  color: #3f3f3f;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 24px;
-  margin: auto;
-  padding: 12px 32px 12px 82px;
-  position: absolute;
-  text-decoration: none;
-  z-index: 2;
-  bottom: 3%;
-  left: 3%;
-  background-color: rgba(155, 155, 155, 0.5);
-}
-
-a.abutton1 .label,
-a.abutton1 .icon-arrow {
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  perspective: 1000;
-}
-
-a.abutton1 .label {
-  display: inline-block;
-  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-a.abutton1 .icon-arrow {
-  fill: #3f3f3f;
-  height: 15px;
-  top: 17px;
-  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1),
-    opacity 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  width: 35px;
-}
-
-a.abutton1 .icon-arrow.before {
-  left: 32px;
-  margin-right: 15px;
-  position: absolute;
-  transform-origin: left center;
-}
-
-a.abutton1 .icon-arrow.after {
-  margin-left: 15px;
-  opacity: 0;
-  position: absolute;
-  right: 32px;
-  transform: translateX(75%) scaleX(0.1);
-  transform-origin: right center;
-}
-
-a.abutton1:hover .label {
-  transform: translateX(-52px);
-}
-
-a.abutton1:hover .icon-arrow.before {
-  opacity: 0;
-  transform: translateX(-75%) scaleX(0.1);
-}
-
-a.abutton1:hover .icon-arrow.after {
-  opacity: 1;
-  transform: translateX(0) scaleX(1);
-}
-
-a.abutton1:active {
-  border-color: #79b4b7;
-  color: #79b4b7;
-}
-
-a.abutton1:active .icon-arrow {
-  fill: #79b4b7;
-}
-
-/* bouton fermer */
-.close-container {
-  position: relative;
-  margin: auto;
-  margin-left: 85%;
-  cursor: pointer;
-}
-
-.leftright {
-  height: 4px;
-  width: 25px;
-  position: absolute;
-  background-color: #9d9d9d;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in;
-  margin-top: -90%;
-}
-
-.rightleft {
-  height: 4px;
-  width: 25px;
-  position: absolute;
-  background-color: #9d9d9d;
-  border-radius: 2px;
-  transform: rotate(-45deg);
-  transition: all 0.3s ease-in;
-  margin-top: -90%;
-}
-.close {
-  margin: 60px 0 0 5px;
-  position: absolute;
-}
-
-.close-container:hover .leftright {
-  transform: rotate(-45deg);
-  background-color: #f25c66;
-}
-.close-container:hover .rightleft {
-  transform: rotate(45deg);
-  background-color: #f25c66;
-}
-.close-container:hover label {
-  opacity: 1;
-}
-</style>
+<style src="@/assets/styles/informations.css" />

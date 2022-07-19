@@ -1,0 +1,59 @@
+#map {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+  }
+#marker{
+  width: 50%;
+}
+
+/*button place details */
+/* bouton restaurant */
+.btnPlaceDetails {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+  z-index: 2;
+  top: 858px;
+  left: 660px;
+}
+.btnPlaceDetails a {
+  font-size: 12px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Montserrat", sans-serif;
+}
+.btnPlaceDetails a:before,
+.btnPlaceDetails a:after {
+  position: absolute;
+  content: "RESTAURANTS ALENTOURS";
+  height: 45px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.btnPlaceDetails a:before {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  transform: rotateY(0deg) translateZ(25px);
+}
+.btnPlaceDetails a:after {
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.btnPlaceDetails a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
+}

@@ -1,11 +1,16 @@
 <template>
-  <div class="infos" v-show="showInfo">
-    <div class="windowInfos" v-for="comment in restoID" :key="comment">
+  <div id="windowInfos" v-show="showInfo">
+    <div v-for="comment in restoID" :key="comment">
       <ul
          v-for="(resto, index) in restos"
         :key="index"
         v-show="comment == index"
       >
+      <span class="imgStreetView">
+        <img  
+        :src="resto.url"/>
+      </span>
+      <span class="underimgSV"/>
         <h2>{{ resto.restaurantName }}</h2>
         <h4 class="h4resto">{{ resto.address }}</h4>
         <div class="divComment">
@@ -60,6 +65,7 @@ export default {
     info: Number,
     displayInfo: Boolean,
     propsMarker: Object,
+    receiveRestoAPI: Array
   },
   data() {
     return {
@@ -83,6 +89,7 @@ export default {
               oneResto.infoComment.push( "▸ " + infos.name + " - " + " mon avis : " + infos.stars + " \u2605" );
               oneResto.infoComment.push("Commentaire : " + infos.comment);
             });
+            oneResto.url = `https://maps.googleapis.com/maps/api/streetview?size=480x200&location=${oneResto.lat},${oneResto.long}&fov=80&heading=${oneResto.heading}&pitch=0&key=AIzaSyBicaraRK7wIvEUpXJ0XptenscyvULmMDM`
           });
         })
         .catch((error) => console.log(error));
@@ -91,12 +98,14 @@ export default {
     info() {//to have the id of the marker
       this.restoID = [];
       this.restoID.push(this.info);
+      document.getElementById('windowInfos').scrollTop = 0
     },
     displayInfo() {//to display the marker's window
       let watchInfo = this.displayInfo;
       this.showInfo = watchInfo;
+      document.getElementById('windowInfos').scrollTop = 0
     },
-    propsMarker() {//reload data and add the marker data into the array
+    propsMarker() {//add the marker data into the array
       this.restos.push(this.propsMarker);
       this.restos.forEach(function (oneResto) {
             oneResto.infoComment = [];
@@ -108,6 +117,23 @@ export default {
       let pick = null
       this.$emit("pick", pick)
     },
+    receiveRestoAPI() {
+      this.receiveRestoAPI.forEach(function (oneResto) {
+        oneResto.infoComment = []
+        axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&placeid=${oneResto.placeID}&fields=reviews&key=AIzaSyBicaraRK7wIvEUpXJ0XptenscyvULmMDM`)
+       .then(response => {
+          oneResto.detailsAPI = response.data.result.reviews
+          oneResto.detailsAPI.forEach(function (placeDetails) {
+            oneResto.infoComment.push( "▸ " + placeDetails.author_name + " - " + " mon avis : " + placeDetails.rating + " \u2605");
+            if (placeDetails.text == "") {
+              placeDetails.text = "Pas de commentaire disponible."
+            }
+            oneResto.infoComment.push("Commentaire : " + placeDetails.text)
+          })
+        })
+      })
+      this.restos = this.restos.concat(this.receiveRestoAPI)
+    }
   },
   methods: {
     hideInfo() {//to hide the marker's window
@@ -134,79 +160,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.infos {
-  z-index: 2;
-  position: absolute;
-  background-color: rgb(255, 255, 255);
-  height: 55%;
-  border: 1px solid black;
-  left: 37%;
-  top: 20%;
-  right: 32%;
-  overflow-y: scroll;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  border-radius: 2%;
-  box-shadow: -5px -9px 0.5em rgba(131, 131, 131, 0.856);
-}
-.ulInfo {
-  left: 50%;
-}
-.btnInfo {
-  position: relative;
-  height: 10%;
-  top: 4%;
-}
-.btn1 {
-  position: relative;
-  left: 35%;
-}
-.btn2 {
-  position: relative;
-  left: 45%;
-}
-.btn:hover {
-  color: rgb(63, 60, 60);
-  border-style: groove;
-}
-.textarea {
-  position: relative;
-  top: 1%;
-}
-.spanAvis {
-  text-decoration: underline;
-  font-size: 17px;
-}
-h2 {
-  text-align: center;
-}
-#firstInput {
-  position: relative;
-  resize: none;
-  left: 6%;
-  padding: 12px;
-  width: 85% !important;
-  background-color: rgba(240, 240, 240, 0.329);
-  border: 0px;
-  border-bottom: 1px solid rgb(190, 190, 190);
-}
-#anotherInput {
-  position: relative;
-  left: 10%;
-  background-color: rgba(240, 240, 240, 0.329);
-  border: 1px solid rgb(190, 190, 190);
-}
-.average {
-  position: relative;
-  left: 20%;
-}
-.divComment {
-  border: 1px solid rgb(190, 190, 190);
-  padding: 2%;
-  border-radius: 3%;
-}
-.h4resto {
-  text-align: center;
-}
-</style>
+<style src="@/assets/styles/infoResto.css" />
