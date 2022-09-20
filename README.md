@@ -1,19 +1,5 @@
-# projet7
+# OpenClassrooms Projet 7
 
-## Project setup
-```
-npm install
-```
+Lancer son propre site d'avis de restaurants
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Projet effectué en VueJs
