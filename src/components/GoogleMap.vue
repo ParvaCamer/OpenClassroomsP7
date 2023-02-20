@@ -67,7 +67,7 @@ export default {
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
-    //alert('Veuillez donner accès à votre position pour une meilleure expérience !') 
+    alert('Veuillez donner accès à votre position pour une meilleure expérience !')
     axios.get("http://localhost:3000/restos").then((res) => {
       this.restos = res.data;
     });
