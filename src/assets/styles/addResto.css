@@ -54,17 +54,21 @@
   }
   /* bouton restaurant */
   .btnResto {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+  }
+  .btnRestoRelative {
     position: relative;
     display: inline-flex;
     width: 180px;
     height: 55px;
     margin: 0 15px;
     perspective: 1000px;
-    z-index: 2;
-    top: 800px;
-    left: 1100px;
+    bottom: 80px;
+    left: 55%;
   }
-  .btnResto a {
+  .btnRestoRelative a {
     font-size: 12px;
     letter-spacing: 1px;
     transform-style: preserve-3d;
@@ -72,8 +76,8 @@
     transition: transform 0.25s;
     font-family: "Montserrat", sans-serif;
   }
-  .btnResto a:before,
-  .btnResto a:after {
+  .btnRestoRelative a:before,
+  .btnRestoRelative a:after {
     position: absolute;
     content: "AJOUTER UN RESTAURANT";
     height: 45px;
@@ -85,15 +89,15 @@
     box-sizing: border-box;
     border-radius: 5px;
   }
-  .btnResto a:before {
+  .btnRestoRelative a:before {
     color: #fff;
     background: rgba(0, 0, 0, 0.3);
     transform: rotateY(0deg) translateZ(25px);
   }
-  .btnResto a:after {
+  .btnRestoRelative a:after {
     color: #000;
     transform: rotateX(90deg) translateZ(25px);
   }
-  .btnResto a:hover {
+  .btnRestoRelative a:hover {
     transform: translateZ(-25px) rotateX(-90deg);
   }

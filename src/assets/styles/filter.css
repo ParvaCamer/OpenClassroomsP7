@@ -11,10 +11,9 @@
   .dropdown-menu {
     position: relative;
     display: inline-block;
-    padding-top: 20px;
     z-index: 2;
-    top: 720px;
-    left: 89%;
+    left: 90%;
+    bottom: 80px;
   }
   .menu-content {
     display: none;

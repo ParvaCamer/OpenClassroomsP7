@@ -1,7 +1,9 @@
 <template>
   <div class="addResto">
     <div class="btnResto">
-      <a href="#" v-on:click="showWindow" v-show="!window"></a>
+      <div class="btnRestoRelative">
+        <a href="#" v-on:click="showWindow" v-show="!window"></a>
+      </div>
     </div>
     <div class="windowResto" v-show="window">
       <h2>Ajout d'un restaurant</h2>
@@ -13,11 +15,7 @@
         <input class="inputAddress" v-model="address" />
         <label>Adresse du restaurant :</label>
       </div>
-      <button
-        class="btnMarker"
-        v-on:click="pickASpot"
-        :disabled="name.length === 0 || address.length === 0"
-      >
+      <button class="btnMarker" v-on:click="pickASpot" :disabled="name.length === 0 || address.length === 0">
         Définir l'endroit
       </button>
       <button class="btnClose" v-on:click="showWindow">Fermer</button>

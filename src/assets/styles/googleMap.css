@@ -15,16 +15,20 @@
 /* bouton restaurant */
 .btnPlaceDetails {
   position: relative;
+  z-index: 2;
+  height: 100vh;
+}
+.btnPlaceDetailsRelative {
+  position: absolute;
+  bottom: 25px;
+  left: 35%;
   display: inline-flex;
   width: 180px;
   height: 55px;
   margin: 0 15px;
   perspective: 1000px;
-  z-index: 2;
-  top: 858px;
-  left: 660px;
 }
-.btnPlaceDetails a {
+.btnPlaceDetailsRelative a {
   font-size: 12px;
   letter-spacing: 1px;
   transform-style: preserve-3d;
@@ -32,8 +36,8 @@
   transition: transform 0.25s;
   font-family: "Montserrat", sans-serif;
 }
-.btnPlaceDetails a:before,
-.btnPlaceDetails a:after {
+.btnPlaceDetailsRelative a:before,
+.btnPlaceDetailsRelative a:after {
   position: absolute;
   content: "RESTAURANTS ALENTOURS";
   height: 45px;
@@ -45,15 +49,15 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
-.btnPlaceDetails a:before {
+.btnPlaceDetailsRelative a:before {
   color: #fff;
   background: rgba(0, 0, 0, 0.3);
   transform: rotateY(0deg) translateZ(25px);
 }
-.btnPlaceDetails a:after {
+.btnPlaceDetailsRelative a:after {
   color: #000;
   transform: rotateX(90deg) translateZ(25px);
 }
-.btnPlaceDetails a:hover {
+.btnPlaceDetailsRelative a:hover {
   transform: translateZ(-25px) rotateX(-90deg);
 }

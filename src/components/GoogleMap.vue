@@ -1,21 +1,20 @@
 <template>
   <div>
-    <GmapMap id="map" :center="userPos || defaultLocation" :zoom="zoom" @click="addMarker" @center_changed="centerUpdated" @zoom_changed="zoomUpdated" :options="options">
-      <GmapMarker :position="userPos || defaultLocation" :icon="icon"/>
+    <GmapMap id="map" :center="userPos || defaultLocation" :zoom="zoom" @click="addMarker" @center_changed="centerUpdated"
+      @zoom_changed="zoomUpdated" :options="options">
+      <GmapMarker :position="userPos || defaultLocation" :icon="icon" />
       <span v-for="(resto, index) in restos" :key="index">
-        <GmapMarker
-          id="marker"
-          v-if=" (restosToShow.includes(index) && restosToShow.length > 0) || restosToShow.length === 0 "
-          :position="{
+        <GmapMarker id="marker"
+          v-if="(restosToShow.includes(index) && restosToShow.length > 0) || restosToShow.length === 0" :position="{
             lat: parseFloat(resto.lat),
             lng: parseFloat(resto.long),
-          }"
-          v-on:click="sendInfos(index)"
-        />
+          }" v-on:click="sendInfos(index)" />
       </span>
     </GmapMap>
     <div class="btnPlaceDetails">
-      <a href="#" @click="findRestaurants"></a>
+      <div class="btnPlaceDetailsRelative">
+        <a href="#" @click="findRestaurants"></a>
+      </div>
     </div>
   </div>
 </template>
@@ -47,14 +46,14 @@ export default {
       url: "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
       center: { lat: 50.66884925400181, lng: 3.0668234933230782 },
       zoom: 16,
-      userPos: {lat: 0, lng: 0},
+      userPos: { lat: 0, lng: 0 },
       options: {
         clickableIcons: false,
       },
-      icon : {
+      icon: {
         url: require("../assets/images/user.png"),
-        scaledSize: {width: 32, height: 32},
-        labelOrigin: {x: 16, y: -10}
+        scaledSize: { width: 32, height: 32 },
+        labelOrigin: { x: 16, y: -10 }
       },
       loadData: true,
       restos: [],
@@ -68,7 +67,7 @@ export default {
 
   mounted() {
     this.getUserPosition(); // run the function to get the position
-    alert('Veuillez donner accès à votre position pour une meilleure expérience !') 
+    //alert('Veuillez donner accès à votre position pour une meilleure expérience !') 
     axios.get("http://localhost:3000/restos").then((res) => {
       this.restos = res.data;
     });
@@ -85,7 +84,7 @@ export default {
       this.zoom = zoom;
     },
     centerUpdated(center) {
-      this.center= {
+      this.center = {
         lat: center.lat(),
         lng: center.lng()
       }
@@ -96,7 +95,7 @@ export default {
       // check if API is supported
       if (navigator.geolocation) {
         // get  geolocation
-        navigator.geolocation.getCurrentPosition( pos => {
+        navigator.geolocation.getCurrentPosition(pos => {
           // set user location
           this.userPos = {
             lat: pos.coords.latitude,
@@ -146,11 +145,11 @@ export default {
       })
     },
     addPlaces() {
-      let restoLength = this.restos.length +1;
+      let restoLength = this.restos.length + 1;
       let restoToSend = [];
       for (let i = 0; i < this.places.length; i++) {
         // for (let j = 0; j < this.restos.length; j++) {
-          
+
         //   if (this.places[i].name === this.restos[j].restaurantName) {
         //     this.places.splice(i,1)
         //   }
@@ -163,7 +162,7 @@ export default {
           long: this.places[i].geometry.location.lng,
           detailsAPI: [],
           placeID: this.places[i].place_id
-          }
+        }
         this.restos.push(newPlace)
         restoToSend.push(newPlace)
       }
